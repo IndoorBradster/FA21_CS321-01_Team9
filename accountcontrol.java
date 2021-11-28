@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package uah.cs321.termproject;
+//package uah.cs321.termproject;
 
 /**
  *
  * @author adrianalanier
  */
-public class UserAccount {
+/*public class UserAccount {
     private String UserName;
     private String PasswordHash;
     private String firstName;
@@ -34,3 +34,27 @@ public class UserAccount {
     
     
 }
+*/
+
+
+
+public class accountcontrol {
+
+   private String username;
+   private String password;
+
+   public accountcontrol(){
+       this.username = "anyusername";
+       this.password = "anypassword";
+   }
+
+   public String getUserName() {
+       return username;
+   }
+   
+   public String getPassword() {
+       return password;
+   }
+
+}
+
