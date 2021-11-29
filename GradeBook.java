@@ -1,4 +1,3 @@
-package Grader;
 import java.util.*;
 
 public class GradeBook {
