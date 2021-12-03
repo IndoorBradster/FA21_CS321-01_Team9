@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import javax.swing.JPanel;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -15,6 +16,7 @@ public class EducatorUI extends javax.swing.JFrame {
 
     private JPanel currentPage;
     private LessonList lessonlist = new LessonList();  
+    private UserList UserList = new UserList();
     
     /**
      * Creates new form ContactEditorUI
@@ -31,21 +33,44 @@ public class EducatorUI extends javax.swing.JFrame {
         try {
             File fXmlFile = new File("lessons.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document doc = dBuilder.parse(fXmlFile);
+            DocumentBuilder docBuilder = dbFactory.newDocumentBuilder();
+            Document doc = docBuilder.parse(fXmlFile);
             doc.getDocumentElement().normalize();
-            NodeList nList = doc.getElementsByTagName("lesson");
+            NodeList nodeList = doc.getElementsByTagName("lesson");
             
-            for (int ind = 0; ind < nList.getLength(); ind++) {
-                Node nNode = nList.item(ind);
-                System.out.printf("new item\n");
+            for (int ind = 0; ind < nodeList.getLength(); ind++) {
+                Node nNode = nodeList.item(ind);
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                    Element eElement = (Element) nNode;
+                    Element tempElement = (Element) nNode;
                     Lesson tempLesson = new Lesson();
-                    tempLesson.setLessonID(eElement.getAttribute("id"));
-                    tempLesson.setLessonTitle(eElement.getElementsByTagName("title").item(0).getTextContent());
-                    tempLesson.setLessonContent(eElement.getElementsByTagName("content").item(0).getTextContent());
+                    tempLesson.setLessonID(tempElement.getAttribute("id"));
+                    tempLesson.setLessonTitle(tempElement.getElementsByTagName("title").item(0).getTextContent());
+                    tempLesson.setLessonContent(tempElement.getElementsByTagName("content").item(0).getTextContent());
                     lessonlist.addLesson(tempLesson);
+                }
+            }
+            
+        } 
+        catch (IOException | ParserConfigurationException | DOMException | SAXException e) {
+        }
+        
+        try {
+            File fXmlFile = new File("users.xml");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = dbFactory.newDocumentBuilder();
+            Document doc = docBuilder.parse(fXmlFile);
+            doc.getDocumentElement().normalize();
+            NodeList nodeList = doc.getElementsByTagName("user");
+            
+            for (int ind = 0; ind < nodeList.getLength(); ind++) {
+                Node nNode = nodeList.item(ind);
+                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                    Element tempElement = (Element) nNode;
+                    accountcontrol tempUser = new accountcontrol();
+                    String userID = tempElement.getAttribute("id");
+                    tempUser.setUserName(userID);
+                    tempUser.setPassword(tempElement.getElementsByTagName("password").item(0).getTextContent());
+                    UserList.addUser(tempUser.getUserName(), tempUser);
                 }
             }
             
@@ -849,17 +874,17 @@ public class EducatorUI extends javax.swing.JFrame {
         swapPanel(GradeBookPage);
     }//GEN-LAST:event_SubmitQuizButtonActionPerformed
 
-    private void Lesson1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Lesson1ButtonActionPerformed
-        swapPanel(LessonPage);
-    }//GEN-LAST:event_Lesson1ButtonActionPerformed
+    private void Question1Option3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question1Option3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Question1Option3ActionPerformed
 
     private void Lesson2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Lesson2ButtonActionPerformed
         swapPanel(LessonPage);
     }//GEN-LAST:event_Lesson2ButtonActionPerformed
 
-    private void Question1Option3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question1Option3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Question1Option3ActionPerformed
+    private void Lesson1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Lesson1ButtonActionPerformed
+        swapPanel(LessonPage);
+    }//GEN-LAST:event_Lesson1ButtonActionPerformed
 
    
     // Variables declaration - do not modify//GEN-BEGIN:variables

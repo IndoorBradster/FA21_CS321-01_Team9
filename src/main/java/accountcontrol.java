@@ -48,6 +48,13 @@ public class accountcontrol {
        this.password = "anypassword";
    }
 
+   public void setUserName(String UserName) {
+       username = UserName;
+   }
+   
+   public void setPassword(String Password) {
+       password = Password;
+   }
    public String getUserName() {
        return username;
    }

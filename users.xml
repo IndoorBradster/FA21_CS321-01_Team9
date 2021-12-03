@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<users>
+    <user id="user1">
+        <password>password1234</password>
+    </user>
+    <user id="user2">
+        <password>pa$$word</password>
+    </user>
+</user>
