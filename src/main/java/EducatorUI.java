@@ -1,20 +1,19 @@
-
-
 import javax.swing.*;
-import org.w3c.dom.NodeList;
-
 
 public class EducatorUI extends javax.swing.JFrame {
 
     private JPanel currentPage;
-    private NodeList nList;
-     DefaultListModel<String> lessonlist = new DefaultListModel<>();  
     
     /**
      * Creates new form ContactEditorUI
      */
     public EducatorUI() {
         initComponents();
+        onInitialize();
+    }
+    
+    // Code that needs to run when initialized
+    private void onInitialize() {
         currentPage = LoginPage;
     }
 
