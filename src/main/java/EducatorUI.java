@@ -1,8 +1,20 @@
-import javax.swing.*;
+import java.io.File;
+import java.io.IOException;
+import javax.swing.JPanel;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import org.w3c.dom.DOMException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 public class EducatorUI extends javax.swing.JFrame {
 
     private JPanel currentPage;
+    private LessonList lessonlist = new LessonList();  
     
     /**
      * Creates new form ContactEditorUI
@@ -15,6 +27,31 @@ public class EducatorUI extends javax.swing.JFrame {
     // Code that needs to run when initialized
     private void onInitialize() {
         currentPage = LoginPage;
+        
+        try {
+            File fXmlFile = new File("lessons.xml");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(fXmlFile);
+            doc.getDocumentElement().normalize();
+            NodeList nList = doc.getElementsByTagName("lesson");
+            
+            for (int ind = 0; ind < nList.getLength(); ind++) {
+                Node nNode = nList.item(ind);
+                System.out.printf("new item\n");
+                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                    Element eElement = (Element) nNode;
+                    Lesson tempLesson = new Lesson();
+                    tempLesson.setLessonID(eElement.getAttribute("id"));
+                    tempLesson.setLessonTitle(eElement.getElementsByTagName("title").item(0).getTextContent());
+                    tempLesson.setLessonContent(eElement.getElementsByTagName("content").item(0).getTextContent());
+                    lessonlist.addLesson(tempLesson);
+                }
+            }
+            
+        } 
+        catch (IOException | ParserConfigurationException | DOMException | SAXException e) {
+        }
     }
 
     /**

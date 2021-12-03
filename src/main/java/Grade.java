@@ -3,7 +3,7 @@ import java.util.*;
 /** Object that holds the score details for a specific lesson.**/
 public class Grade {
     private String LessonID;    // Correlates to the LessonID of a lesson.
-    private int QuizScore;   // The final score of a quiz.
+    private int QuizGrade;   // The final score of a quiz.
     
     /** Grade Class Constructor **/
     public void Grade() {
@@ -14,22 +14,23 @@ public class Grade {
     * @param ScoreGrade: Grade value for specific lesson**/
     public void setGrade(String ID, int ScoreGrade) {
         LessonID = ID;
-        QuizScore = ScoreGrade;
+        QuizGrade = ScoreGrade;
     }
     
     /** Returns the QuizScore of the Grade object
      * @return double QuizScore
      */
-    public int getScore() {
-        return QuizScore;
+    public int getGrade() {
+        return QuizGrade;
     }
     
-    /** Updates the score for a lesson that already has a QuizScore **/
-    public void updateScore(int Score) {
-        QuizScore = Score;
+    /** Updates the score for a lesson that already has a QuizScore
+     * @param Grade **/
+    public void updateGrade(int Grade) {
+        QuizGrade = Grade;
     }
     
-    String GetLessonID() {
+    public String GetLessonID() {
         return LessonID;
     }
 }

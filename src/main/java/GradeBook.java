@@ -2,7 +2,7 @@ import java.util.*;
 
 public class GradeBook {
 
-    private Hashtable<String, Grade> GradeBookScores = new Hashtable<String, Grade>();
+    private final HashMap<String, Grade> GradeBook = new HashMap<>();
     //private Dictionary<String, Grade> GradeBookScores;
     
     /** Default GradeBook constructor **/
@@ -13,23 +13,27 @@ public class GradeBook {
      * @param LessonID: Lesson ID is a unique identifier for each Lesson
      * @param grade: Grade Object stores details about a users grade for a specific lesson. **/
     public void addScore(String LessonID, Grade grade) {
-        GradeBookScores.put(LessonID, grade);
+        GradeBook.put(LessonID, grade);
     }
     
-    /** Return the quiz score related to the LessonID **/
-    public int getScore(String LessonID) {
-        Grade grade = GradeBookScores.get(LessonID);
-        return grade.getScore();
+    /** Return the quiz score related to the LessonID
+     * @param LessonID
+     * @return  int Score**/
+    public int getGrade(String LessonID) {
+        Grade grade = GradeBook.get(LessonID);
+        return grade.getGrade();
     }
     
-    /** Return the int value of the size of the GradeBook. **/
+    /** Return the int value of the size of the GradeBook.
+     * @return int GradeBookSize **/
     public int getGradeBookSize() {
-        return GradeBookScores.size();
+        return GradeBook.size();
     }
     
-    /** This method will return an Enumeration of keys (LessonID's) **/
-    public Enumeration<String> getGradeBookIDs() {
-        return GradeBookScores.keys();
+    /**
+     * @return returns a set of keys (LessonID's)**/
+    public Set<String> getGradeBookIDs() {
+        return GradeBook.keySet();
         
         /* Example: Use the following code to print each LessonID
         Enumeration keys = Gradebook1.getGradeBookIDs();
