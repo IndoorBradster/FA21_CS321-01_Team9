@@ -17,13 +17,26 @@ public class LessonList {
     public LessonList() {
     }
     
+/** Adds a lesson to LessonList
+ * @param lesson Lesson to added to the list
+*/
     public void addLesson(Lesson lesson) {
         LessonList.add(lesson);
     }
     
+/** Deletes lesson from LessonList
+ * @param lesson Lesson to be removed
+ *  
+*/
+
     public void removeLesson(Lesson lesson) {
         LessonList.remove(lesson);
     }
+
+/** Gets List of lesson titles
+ * 
+ * @return Titles 
+*/
     
     public List<String> getLessonTitles() {
         
