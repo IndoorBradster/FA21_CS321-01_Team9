@@ -37,28 +37,51 @@
 */
 
 
-
+/**
+* Holds functions for username and password control
+*/
 public class accountcontrol {
 
    private String username;
    private String password;
 
+
+/**
+* Contructor, defaults username and password to generic string
+*/
    public accountcontrol(){
        this.username = "anyusername";
        this.password = "anypassword";
    }
 
+/**
+* Sets account username
+* @param UserName string to assign as the username
+*/
    public void setUserName(String UserName) {
        username = UserName;
    }
-   
+
+/**
+* Sets account username
+* @param Password string to assign as the account password
+*/   
    public void setPassword(String Password) {
        password = Password;
    }
+
+/**
+* gets account username
+* @return UserName 
+*/
    public String getUserName() {
        return username;
    }
-   
+
+/**
+* gets account password
+* @return Password 
+*/
    public String getPassword() {
        return password;
    }
