@@ -30,6 +30,7 @@ public class EducatorUI extends javax.swing.JFrame {
     private void onInitialize() {
         currentPage = LoginPage;
         
+        // Import data from lesson file and updates a lessonlist object
         try {
             File fXmlFile = new File("lessons.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -52,8 +53,10 @@ public class EducatorUI extends javax.swing.JFrame {
             
         } 
         catch (IOException | ParserConfigurationException | DOMException | SAXException e) {
+            //exception handling done here
         }
         
+        // Import data from userlist file and updates a userlist object
         try {
             File fXmlFile = new File("users.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -76,6 +79,7 @@ public class EducatorUI extends javax.swing.JFrame {
             
         } 
         catch (IOException | ParserConfigurationException | DOMException | SAXException e) {
+            //exception handling done here
         }
     }
 
@@ -88,7 +92,9 @@ public class EducatorUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        ButtonGroup_QuizQuestion1 = new javax.swing.ButtonGroup();
+        ButtonGroup_QuizQuestion2 = new javax.swing.ButtonGroup();
+        ButtonGroup_QuizQuestion3 = new javax.swing.ButtonGroup();
         HomeButton = new javax.swing.JButton();
         LogOutButton = new javax.swing.JButton();
         ContentPanel = new javax.swing.JPanel();
@@ -427,12 +433,16 @@ public class EducatorUI extends javax.swing.JFrame {
         Question1TextArea.setWrapStyleWord(true);
         Question1ScrollPanel.setViewportView(Question1TextArea);
 
+        ButtonGroup_QuizQuestion1.add(Question1Option1);
         Question1Option1.setText("Answer A");
 
+        ButtonGroup_QuizQuestion1.add(Question1Option2);
         Question1Option2.setText("Answer B");
 
+        ButtonGroup_QuizQuestion1.add(Question1Option4);
         Question1Option4.setText("Answer D");
 
+        ButtonGroup_QuizQuestion1.add(Question1Option3);
         Question1Option3.setText("Answer C");
         Question1Option3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -486,12 +496,16 @@ public class EducatorUI extends javax.swing.JFrame {
         Question2TextArea.setWrapStyleWord(true);
         Question2ScrollPanel.setViewportView(Question2TextArea);
 
+        ButtonGroup_QuizQuestion2.add(Question2Option1);
         Question2Option1.setText("Answer A");
 
+        ButtonGroup_QuizQuestion2.add(Question2Option2);
         Question2Option2.setText("Answer B");
 
+        ButtonGroup_QuizQuestion2.add(Question2Option3);
         Question2Option3.setText("Answer D");
 
+        ButtonGroup_QuizQuestion2.add(Question2Option4);
         Question2Option4.setText("Answer C");
 
         javax.swing.GroupLayout Question2PanelLayout = new javax.swing.GroupLayout(Question2Panel);
@@ -540,12 +554,16 @@ public class EducatorUI extends javax.swing.JFrame {
         Question3TextArea.setWrapStyleWord(true);
         Question3ScrollPanel.setViewportView(Question3TextArea);
 
+        ButtonGroup_QuizQuestion3.add(Question3Option1);
         Question3Option1.setText("Answer A");
 
+        ButtonGroup_QuizQuestion3.add(Question3Option2);
         Question3Option2.setText("Answer B");
 
+        ButtonGroup_QuizQuestion3.add(Question3Option3);
         Question3Option3.setText("Answer D");
 
+        ButtonGroup_QuizQuestion3.add(Question3Option4);
         Question3Option4.setText("Answer C");
 
         javax.swing.GroupLayout Question3PanelLayout = new javax.swing.GroupLayout(Question3Panel);
@@ -888,6 +906,9 @@ public class EducatorUI extends javax.swing.JFrame {
 
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup ButtonGroup_QuizQuestion1;
+    private javax.swing.ButtonGroup ButtonGroup_QuizQuestion2;
+    private javax.swing.ButtonGroup ButtonGroup_QuizQuestion3;
     private javax.swing.JPanel ContentPanel;
     private javax.swing.JLabel GradeBookLabel;
     private javax.swing.JPanel GradeBookPage;
@@ -958,7 +979,6 @@ public class EducatorUI extends javax.swing.JFrame {
     private javax.swing.JTextField UsernameField;
     private javax.swing.JLabel UsernameLabel;
     private javax.swing.JLabel WelcomeTitle;
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 

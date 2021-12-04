@@ -1,4 +1,3 @@
-import java.util.*;
 
 /** Object that holds the score details for a specific lesson.**/
 public class Grade {
