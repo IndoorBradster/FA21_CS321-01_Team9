@@ -24,7 +24,7 @@ public class Question {
     
 // Setters
 /** Set the number value of a question
- * @param num int to assign to set the question number.
+ * @param string to assign to set the question number.
  *  
 */
     public void setQuestionNumber(String num) {
@@ -122,7 +122,10 @@ public class Question {
         return OptionC;
     }
     
-            
+/** Get D  from the multiple choice options
+ * @return OptionD
+ *  
+*/             
     public String getOptionD() {
         return OptionD;
     }
