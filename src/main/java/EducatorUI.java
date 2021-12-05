@@ -852,7 +852,7 @@ public class EducatorUI extends javax.swing.JFrame {
 
     private void LessonsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LessonsButtonActionPerformed
         swapPanel(LessonSelectPage);
-        LessonPageInit(lessonlist);
+        LessonListPageInit(lessonlist);
     }//GEN-LAST:event_LessonsButtonActionPerformed
 
     private void ScoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScoresButtonActionPerformed
@@ -882,6 +882,7 @@ public class EducatorUI extends javax.swing.JFrame {
         LessonButton lessonbutton = (LessonButton) evt.getSource();
         currentLesson = (Lesson) lessonbutton.getLesson();
         swapPanel(LessonPage);
+        LessonPageInit(currentLesson);
     }
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -982,7 +983,7 @@ public class EducatorUI extends javax.swing.JFrame {
         }
     }
 
-    private void LessonPageInit(LessonList lessonlist) {
+    private void LessonListPageInit(LessonList lessonlist) {
 
         Lesson Lesson = new Lesson();
         int dimy = 0;
@@ -990,6 +991,7 @@ public class EducatorUI extends javax.swing.JFrame {
             Lesson = it.next();
             LessonButton button = new LessonButton();
             button.setText(Lesson.getLessonTitle());
+            button.setLesson(Lesson);
             button.setBounds(12,12+dimy,LessonListPanel.getWidth()-24,50);
             button.setName(Lesson.getLessonID());
             LessonListPanel.add(button);
@@ -1001,5 +1003,11 @@ public class EducatorUI extends javax.swing.JFrame {
             });
         }
         LessonListPanel.setVisible(true);
+    }
+    
+    private void LessonPageInit(Lesson lesson) {
+        LessonTitle.setText(lesson.getLessonTitle());
+        LessonContentTextPanel.setText(lesson.getLessonContent());
+        LessonPage.updateUI();
     }
 }
