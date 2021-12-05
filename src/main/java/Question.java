@@ -15,6 +15,8 @@ public class Question {
     private String OptionC;
     private String OptionD;
     private String CorrectAnswer;
+    private String SelectedAnswer;
+
  
     
     /** Default constructor, This represents one singular question 
@@ -136,5 +138,13 @@ public class Question {
 
    public String getCorrectAnswer() {
         return CorrectAnswer;
+   }
+   
+   public String getSelectedAnswer() {
+       return SelectedAnswer;
+   }
+   
+   public void setSelectedAnswer(String s) {
+       SelectedAnswer = s;
    }
 }

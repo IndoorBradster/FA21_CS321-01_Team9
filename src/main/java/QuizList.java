@@ -28,4 +28,8 @@ public class QuizList {
     public quiz getQuiz(String LessonID) {
         return quizzes.get(LessonID);
     }
+    
+    public void setQuizQuestionScore(String LessonID, Question question) {
+        
+    }
 }

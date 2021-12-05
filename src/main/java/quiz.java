@@ -56,6 +56,8 @@ public class quiz{
         questions.add(question);
     }
     
+
+    
 // getters
 	
 /** Gets the ID of the matching the lesson, which is now associated with QuizID
@@ -67,9 +69,25 @@ public class quiz{
 /** Gets the list of questions in the quiz
  * @return questions
  */
-    public List<Question> getQuestions(){
+    public List getQuestions(){
         return questions;
     }
+    
+    public int calculateScore(){
+        double Score = 0;
+        for(Question q : questions) {
+            try {
+                String selectedAnswer = q.getSelectedAnswer();
+                String correctAnswer = q.getCorrectAnswer();
+                if (selectedAnswer.equals(correctAnswer)) {
+                    Score++;
+                }
+            } catch (NullPointerException e) {
+            }
+        }
+        Score = (int) ((Score / (double) questions.size())*100);
+        return (int) Score;
+    } 
 
 // !- need to port to quizzes.xml -!
 //	void questions1(){

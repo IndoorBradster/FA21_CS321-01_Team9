@@ -44,6 +44,7 @@ public class accountcontrol {
 
    private String username;
    private String password;
+   private GradeBook Grades = new GradeBook();
 
 
 /**
@@ -68,6 +69,14 @@ public class accountcontrol {
 */   
    public void setPassword(String Password) {
        password = Password;
+   }
+   
+   public void addGrade(String LessonID, Grade grade) {
+       this.Grades.addScore(LessonID, grade);
+   }
+   
+   public int getGrade (String LessonID) {
+       return this.Grades.getGrade(LessonID);
    }
 
 /**
