@@ -10,7 +10,6 @@
 public class Question {
     private int QuestionNumber;
     private String QuestionPrompt;
-    private String LessonContent;
     private String OptionA;
     private String OptionB;
     private String OptionC;
