@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <quizzes>
     <quiz id="1001">
-        <question>
+        <question type="mc">
+			<questionnumber>1</questionnumber>
 			<prompt>Is this correct?</prompt>
 			<answer id = "a">No</answer>
 			<answer id = "b">No</answer>
@@ -9,7 +10,8 @@
 			<answer id = "d">No</answer>
 			<correctanswer>c</correctanswer>
 		</question>
-		<question>
+		<question type="mc">
+			<questionnumber>2</questionnumber>
 			<prompt>Is this correct?</prompt>
 			<answer id = "a">Yes</answer>
 			<answer id = "b">No</answer>
@@ -20,7 +22,8 @@
     </quiz>
 
 	<quiz id="2001">
-        <question>
+        <question type="mc" number="1">
+			<questionnumber>1</questionnumber>
 			<prompt>Is this correct?</prompt>
 			<answer id = "a">No</answer>
 			<answer id = "b">Yes</answer>
@@ -28,7 +31,8 @@
 			<answer id = "d">No</answer>
 			<correctanswer>b</correctanswer>
 		</question>
-		<question>
+		<question type="mc">
+			<questionnumber>2</questionnumber>
 			<prompt>Is this correct?</prompt>
 			<answer id = "a">No</answer>
 			<answer id = "b">No</answer>
