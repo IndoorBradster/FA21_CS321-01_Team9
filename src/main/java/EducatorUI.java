@@ -1,3 +1,4 @@
+import static UserSerializer.writeObjectToFile;
 import java.awt.Component;
 import java.io.File;
 import java.io.IOException;
@@ -798,6 +799,7 @@ public class EducatorUI extends javax.swing.JFrame {
     }//GEN-LAST:event_LessonsButtonActionPerformed
 
     private void ScoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScoresButtonActionPerformed
+        initGradeBookPage();
         swapPanel(GradeBookPage);
     }//GEN-LAST:event_ScoresButtonActionPerformed
 
@@ -998,6 +1000,8 @@ public class EducatorUI extends javax.swing.JFrame {
     }
     
     private void initGradeBookPage() {
+        GradeBookPanel.removeAll();
+        GradeBookPanel.revalidate();
         Lesson Lesson;
         int dimy = 0;
         for (Iterator<Lesson> it = lessonlist.getLessons().iterator(); it.hasNext();) {
