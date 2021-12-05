@@ -35,7 +35,7 @@ public class Lesson {
     }
    
 /** Set the content of a lesson
- * @param content string to assign to a particular lessons content
+ * @param Content string to assign to a particular lessons content
  *  
 */ 
     public void setLessonContent(String Content) {
