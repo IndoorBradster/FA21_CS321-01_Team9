@@ -4,10 +4,10 @@
         <question type="mc">
 			<questionnumber>1</questionnumber>
 			<prompt>What's the color of the sky?</prompt>
-			<answer id = "a">Green</answer>
-			<answer id = "b">Yellow</answer>
-			<answer id = "c">Blue</answer>
-			<answer id = "d">Red</answer>
+			<answer>Green</answer>
+			<answer>Yellow</answer>
+			<answer>Blue</answer>
+			<answer>Red</answer>
 			<correctanswer>c</correctanswer>
 		</question>
 		<question type="mc">
@@ -22,6 +22,27 @@
     </quiz>
 
 	<quiz id="2001">
+        <question type="mc" number="1">
+			<questionnumber>1</questionnumber>
+			<prompt>Is ths correct?</prompt>
+			<answer id = "a">No</answer>
+			<answer id = "b">Yes</answer>
+			<answer id = "c">No</answer>
+			<answer id = "d">No</answer>
+			<correctanswer>b</correctanswer>
+		</question>
+		<question type="mc">
+			<questionnumber>2</questionnumber>
+			<prompt>Iss correct?</prompt>
+			<answer id = "a">No</answer>
+			<answer id = "b">No</answer>
+			<answer id = "c">No</answer>
+			<answer id = "d">Yes</answer>
+			<correctanswer>d</correctanswer>
+		</question>
+    </quiz>
+	
+	<quiz id="3001">
         <question type="mc" number="1">
 			<questionnumber>1</questionnumber>
 			<prompt>Is ths correct?</prompt>

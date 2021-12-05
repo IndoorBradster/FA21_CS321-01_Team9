@@ -145,6 +145,31 @@ public class EducatorUI extends javax.swing.JFrame {
         ButtonGroup_QuizQuestion1 = new javax.swing.ButtonGroup();
         ButtonGroup_QuizQuestion2 = new javax.swing.ButtonGroup();
         ButtonGroup_QuizQuestion3 = new javax.swing.ButtonGroup();
+        QuizContentPanelOld = new javax.swing.JPanel();
+        Question1Panel = new javax.swing.JPanel();
+        Question1Label = new javax.swing.JLabel();
+        Question1ScrollPanel = new javax.swing.JScrollPane();
+        Question1TextArea = new javax.swing.JTextArea();
+        Question1Option1 = new javax.swing.JRadioButton();
+        Question1Option2 = new javax.swing.JRadioButton();
+        Question1Option4 = new javax.swing.JRadioButton();
+        Question1Option3 = new javax.swing.JRadioButton();
+        Question2Panel = new javax.swing.JPanel();
+        Question2Label = new javax.swing.JLabel();
+        Question2ScrollPanel = new javax.swing.JScrollPane();
+        Question2TextArea = new javax.swing.JTextArea();
+        Question2Option1 = new javax.swing.JRadioButton();
+        Question2Option2 = new javax.swing.JRadioButton();
+        Question2Option3 = new javax.swing.JRadioButton();
+        Question2Option4 = new javax.swing.JRadioButton();
+        Question3Panel = new javax.swing.JPanel();
+        Question3Label = new javax.swing.JLabel();
+        Question3ScrollPanel = new javax.swing.JScrollPane();
+        Question3TextArea = new javax.swing.JTextArea();
+        Question3Option1 = new javax.swing.JRadioButton();
+        Question3Option2 = new javax.swing.JRadioButton();
+        Question3Option3 = new javax.swing.JRadioButton();
+        Question3Option4 = new javax.swing.JRadioButton();
         HomeButton = new javax.swing.JButton();
         LogOutButton = new javax.swing.JButton();
         ContentPanel = new javax.swing.JPanel();
@@ -173,30 +198,6 @@ public class EducatorUI extends javax.swing.JFrame {
         QuizTitle = new javax.swing.JLabel();
         QuizScrollPanel = new javax.swing.JScrollPane();
         QuizContentPanel = new javax.swing.JPanel();
-        Question1Panel = new javax.swing.JPanel();
-        Question1Label = new javax.swing.JLabel();
-        Question1ScrollPanel = new javax.swing.JScrollPane();
-        Question1TextArea = new javax.swing.JTextArea();
-        Question1Option1 = new javax.swing.JRadioButton();
-        Question1Option2 = new javax.swing.JRadioButton();
-        Question1Option4 = new javax.swing.JRadioButton();
-        Question1Option3 = new javax.swing.JRadioButton();
-        Question2Panel = new javax.swing.JPanel();
-        Question2Label = new javax.swing.JLabel();
-        Question2ScrollPanel = new javax.swing.JScrollPane();
-        Question2TextArea = new javax.swing.JTextArea();
-        Question2Option1 = new javax.swing.JRadioButton();
-        Question2Option2 = new javax.swing.JRadioButton();
-        Question2Option3 = new javax.swing.JRadioButton();
-        Question2Option4 = new javax.swing.JRadioButton();
-        Question3Panel = new javax.swing.JPanel();
-        Question3Label = new javax.swing.JLabel();
-        Question3ScrollPanel = new javax.swing.JScrollPane();
-        Question3TextArea = new javax.swing.JTextArea();
-        Question3Option1 = new javax.swing.JRadioButton();
-        Question3Option2 = new javax.swing.JRadioButton();
-        Question3Option3 = new javax.swing.JRadioButton();
-        Question3Option4 = new javax.swing.JRadioButton();
         SubmitQuizButton = new javax.swing.JButton();
         GradeBookPage = new javax.swing.JPanel();
         GradeBookLabel = new javax.swing.JLabel();
@@ -214,242 +215,6 @@ public class EducatorUI extends javax.swing.JFrame {
         Lesson4GradePanel = new javax.swing.JPanel();
         Lesson4GradeBookTitle = new javax.swing.JLabel();
         Lesson4GradeBookScore = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(10, 10));
-        setName("Shell"); // NOI18N
-
-        HomeButton.setEnabled(false);
-        HomeButton.setLabel("Home");
-        HomeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HomeButtonActionPerformed(evt);
-            }
-        });
-
-        LogOutButton.setText("LogOut");
-        LogOutButton.setEnabled(false);
-        LogOutButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogOutButtonActionPerformed(evt);
-            }
-        });
-
-        ContentPanel.setLayout(new java.awt.CardLayout());
-
-        LoginPromptText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LoginPromptText.setText("Please Login");
-
-        UsernameLabel.setText("Username:");
-
-        PasswordLabel.setText("Password:");
-
-        LoginButton.setText("Login");
-        LoginButton.setName(""); // NOI18N
-        LoginButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(UsernameLabel)
-                    .addComponent(PasswordLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LoginButton)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(PasswordField)
-                        .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(47, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(UsernameLabel)
-                        .addGap(14, 14, 14)
-                        .addComponent(PasswordLabel))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(LoginButton)
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout LoginPageLayout = new javax.swing.GroupLayout(LoginPage);
-        LoginPage.setLayout(LoginPageLayout);
-        LoginPageLayout.setHorizontalGroup(
-            LoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LoginPageLayout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addGroup(LoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LoginPromptText, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(172, 172, 172))
-        );
-        LoginPageLayout.setVerticalGroup(
-            LoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LoginPageLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(LoginPromptText)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(315, Short.MAX_VALUE))
-        );
-
-        ContentPanel.add(LoginPage, "card2");
-
-        WelcomeTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        WelcomeTitle.setText("Welcome!");
-
-        LessonsButton.setText("Lessons");
-        LessonsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LessonsButtonActionPerformed(evt);
-            }
-        });
-
-        ScoresButton.setText("Scores");
-        ScoresButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ScoresButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout HomePageLayout = new javax.swing.GroupLayout(HomePage);
-        HomePage.setLayout(HomePageLayout);
-        HomePageLayout.setHorizontalGroup(
-            HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HomePageLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addGroup(HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(WelcomeTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
-                    .addComponent(ScoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LessonsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(195, 195, 195))
-        );
-        HomePageLayout.setVerticalGroup(
-            HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HomePageLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(WelcomeTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LessonsButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ScoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(370, Short.MAX_VALUE))
-        );
-
-        ContentPanel.add(HomePage, "card2");
-
-        LessonsText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LessonsText.setText("Lessons");
-        LessonsText.setToolTipText("");
-
-        LessonListScrollPanel.setToolTipText("");
-
-        javax.swing.GroupLayout LessonListPanelLayout = new javax.swing.GroupLayout(LessonListPanel);
-        LessonListPanel.setLayout(LessonListPanelLayout);
-        LessonListPanelLayout.setHorizontalGroup(
-            LessonListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-        LessonListPanelLayout.setVerticalGroup(
-            LessonListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 102, Short.MAX_VALUE)
-        );
-
-        LessonListScrollPanel.setViewportView(LessonListPanel);
-
-        javax.swing.GroupLayout LessonSelectPageLayout = new javax.swing.GroupLayout(LessonSelectPage);
-        LessonSelectPage.setLayout(LessonSelectPageLayout);
-        LessonSelectPageLayout.setHorizontalGroup(
-            LessonSelectPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LessonSelectPageLayout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(LessonsText, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE)
-                .addGap(44, 44, 44))
-            .addGroup(LessonSelectPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(LessonSelectPageLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(LessonListScrollPanel)
-                    .addContainerGap()))
-        );
-        LessonSelectPageLayout.setVerticalGroup(
-            LessonSelectPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LessonSelectPageLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(LessonsText)
-                .addContainerGap(472, Short.MAX_VALUE))
-            .addGroup(LessonSelectPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(LessonSelectPageLayout.createSequentialGroup()
-                    .addGap(46, 46, 46)
-                    .addComponent(LessonListScrollPanel)
-                    .addGap(46, 46, 46)))
-        );
-
-        ContentPanel.add(LessonSelectPage, "card2");
-
-        LessonTitle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        LessonTitle.setText("Lesson 1:");
-
-        LessonContentTextPanel.setColumns(20);
-        LessonContentTextPanel.setLineWrap(true);
-        LessonContentTextPanel.setRows(5);
-        LessonContentTextPanel.setText("    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus, est eget efficitur dignissim, neque ligula tristique mauris, vel vestibulum purus nulla ac ante. Mauris porttitor nibh at imperdiet interdum. Nunc ut mauris quam. In sollicitudin nibh ac enim venenatis facilisis. Duis vitae tempus velit, id pharetra risus. Aenean non molestie erat. Suspendisse ac nunc est. Aenean ex quam, accumsan sit amet ultricies ac, elementum molestie tortor. Cras id semper odio. Duis egestas tellus justo, id rutrum arcu eleifend ut. Praesent sit amet est eget dui dictum pellentesque.\n\n    Cras consectetur tristique ex a euismod. Maecenas accumsan sed augue id malesuada. Donec erat turpis, interdum id vestibulum vel, lacinia a velit. Maecenas metus ipsum, suscipit id velit et, posuere efficitur eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris eu lorem elit. Pellentesque ultricies eu ipsum sodales accumsan. Pellentesque gravida sit amet nunc in condimentum.\n\n    Sed et viverra sapien. Nunc faucibus orci eu quam pharetra viverra. Pellentesque tristique pretium semper. Sed bibendum felis et lorem scelerisque efficitur. Fusce ac sem risus. Aliquam nec nisl tempor, auctor erat eu, consequat eros. Donec nec pellentesque eros. Nullam tincidunt ultricies velit vitae ullamcorper. Aenean sagittis dignissim arcu ac porttitor. Quisque ligula eros, mattis at iaculis quis, facilisis quis urna.\n\n    Nunc sed sem quis augue dapibus hendrerit ut sed orci. Proin turpis nunc, pharetra et commodo nec, rutrum sodales nibh. Etiam ultricies pulvinar ante, eget molestie libero. Fusce viverra quis lorem vitae tincidunt. Phasellus tortor metus, congue in ex ornare, euismod faucibus nisl. Ut diam lacus, porta sed elit nec, ultrices tempus magna. Fusce diam purus, viverra eu dignissim eu, malesuada sed ipsum. Nulla a aliquet nisl, quis varius leo. Nullam eget vestibulum orci. Cras at aliquam arcu. Etiam diam dolor, ullamcorper vitae malesuada nec, tristique a magna. Donec a venenatis magna. Donec a nisl id libero varius pulvinar. Aliquam consequat sapien id nunc dignissim, eget vulputate leo scelerisque. Phasellus ut fermentum nulla.\n\n    Nulla iaculis dolor venenatis elit eleifend facilisis. Cras imperdiet ac magna vitae scelerisque. Etiam non elit in velit luctus laoreet a in libero. Aliquam nec quam velit. Quisque condimentum mauris tellus, vehicula sollicitudin ipsum porta vitae. In at venenatis augue, vel venenatis ante. Aenean sit amet vulputate velit. In nec velit vel lacus hendrerit condimentum quis sed elit. Mauris at pharetra ante.");
-        LessonContentTextPanel.setWrapStyleWord(true);
-        LessonScrollPanel.setViewportView(LessonContentTextPanel);
-
-        QuizButton.setText("Take Quiz");
-        QuizButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                QuizButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout LessonPageLayout = new javax.swing.GroupLayout(LessonPage);
-        LessonPage.setLayout(LessonPageLayout);
-        LessonPageLayout.setHorizontalGroup(
-            LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LessonPageLayout.createSequentialGroup()
-                .addGroup(LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(LessonPageLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(QuizButton)
-                            .addComponent(LessonScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(LessonPageLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(LessonTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-        LessonPageLayout.setVerticalGroup(
-            LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LessonPageLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(LessonTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LessonScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(QuizButton)
-                .addContainerGap(52, Short.MAX_VALUE))
-        );
-
-        ContentPanel.add(LessonPage, "card2");
-
-        QuizTitle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        QuizTitle.setText("Quiz 1:");
 
         Question1Label.setText("Question 1:");
 
@@ -630,21 +395,21 @@ public class EducatorUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout QuizContentPanelLayout = new javax.swing.GroupLayout(QuizContentPanel);
-        QuizContentPanel.setLayout(QuizContentPanelLayout);
-        QuizContentPanelLayout.setHorizontalGroup(
-            QuizContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(QuizContentPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout QuizContentPanelOldLayout = new javax.swing.GroupLayout(QuizContentPanelOld);
+        QuizContentPanelOld.setLayout(QuizContentPanelOldLayout);
+        QuizContentPanelOldLayout.setHorizontalGroup(
+            QuizContentPanelOldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizContentPanelOldLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(QuizContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(QuizContentPanelOldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Question1Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Question2Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Question3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        QuizContentPanelLayout.setVerticalGroup(
-            QuizContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(QuizContentPanelLayout.createSequentialGroup()
+        QuizContentPanelOldLayout.setVerticalGroup(
+            QuizContentPanelOldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuizContentPanelOldLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Question1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -652,6 +417,253 @@ public class EducatorUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(Question3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(10, 10));
+        setName("Shell"); // NOI18N
+
+        HomeButton.setEnabled(false);
+        HomeButton.setLabel("Home");
+        HomeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomeButtonActionPerformed(evt);
+            }
+        });
+
+        LogOutButton.setText("LogOut");
+        LogOutButton.setEnabled(false);
+        LogOutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogOutButtonActionPerformed(evt);
+            }
+        });
+
+        ContentPanel.setLayout(new java.awt.CardLayout());
+
+        LoginPromptText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LoginPromptText.setText("Please Login");
+
+        UsernameLabel.setText("Username:");
+
+        PasswordLabel.setText("Password:");
+
+        LoginButton.setText("Login");
+        LoginButton.setName(""); // NOI18N
+        LoginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(UsernameLabel)
+                    .addComponent(PasswordLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LoginButton)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(PasswordField)
+                        .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(47, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(UsernameLabel)
+                        .addGap(14, 14, 14)
+                        .addComponent(PasswordLabel))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(LoginButton)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout LoginPageLayout = new javax.swing.GroupLayout(LoginPage);
+        LoginPage.setLayout(LoginPageLayout);
+        LoginPageLayout.setHorizontalGroup(
+            LoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LoginPageLayout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addGroup(LoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LoginPromptText, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(172, 172, 172))
+        );
+        LoginPageLayout.setVerticalGroup(
+            LoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LoginPageLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(LoginPromptText)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(315, Short.MAX_VALUE))
+        );
+
+        ContentPanel.add(LoginPage, "card2");
+
+        WelcomeTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        WelcomeTitle.setText("Welcome!");
+
+        LessonsButton.setText("Lessons");
+        LessonsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LessonsButtonActionPerformed(evt);
+            }
+        });
+
+        ScoresButton.setText("Scores");
+        ScoresButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ScoresButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout HomePageLayout = new javax.swing.GroupLayout(HomePage);
+        HomePage.setLayout(HomePageLayout);
+        HomePageLayout.setHorizontalGroup(
+            HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HomePageLayout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addGroup(HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(WelcomeTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+                    .addComponent(ScoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LessonsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(195, 195, 195))
+        );
+        HomePageLayout.setVerticalGroup(
+            HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HomePageLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(WelcomeTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(LessonsButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ScoresButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(370, Short.MAX_VALUE))
+        );
+
+        ContentPanel.add(HomePage, "card2");
+
+        LessonsText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LessonsText.setText("Lessons");
+        LessonsText.setToolTipText("");
+
+        LessonListScrollPanel.setToolTipText("");
+
+        javax.swing.GroupLayout LessonListPanelLayout = new javax.swing.GroupLayout(LessonListPanel);
+        LessonListPanel.setLayout(LessonListPanelLayout);
+        LessonListPanelLayout.setHorizontalGroup(
+            LessonListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+        LessonListPanelLayout.setVerticalGroup(
+            LessonListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 404, Short.MAX_VALUE)
+        );
+
+        LessonListScrollPanel.setViewportView(LessonListPanel);
+
+        javax.swing.GroupLayout LessonSelectPageLayout = new javax.swing.GroupLayout(LessonSelectPage);
+        LessonSelectPage.setLayout(LessonSelectPageLayout);
+        LessonSelectPageLayout.setHorizontalGroup(
+            LessonSelectPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LessonSelectPageLayout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(LessonsText, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE)
+                .addGap(44, 44, 44))
+            .addGroup(LessonSelectPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(LessonSelectPageLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(LessonListScrollPanel)
+                    .addContainerGap()))
+        );
+        LessonSelectPageLayout.setVerticalGroup(
+            LessonSelectPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LessonSelectPageLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(LessonsText)
+                .addContainerGap(472, Short.MAX_VALUE))
+            .addGroup(LessonSelectPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(LessonSelectPageLayout.createSequentialGroup()
+                    .addGap(46, 46, 46)
+                    .addComponent(LessonListScrollPanel)
+                    .addGap(46, 46, 46)))
+        );
+
+        ContentPanel.add(LessonSelectPage, "card2");
+
+        LessonTitle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        LessonTitle.setText("Lesson 1:");
+
+        LessonContentTextPanel.setColumns(20);
+        LessonContentTextPanel.setLineWrap(true);
+        LessonContentTextPanel.setRows(5);
+        LessonContentTextPanel.setText("    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus, est eget efficitur dignissim, neque ligula tristique mauris, vel vestibulum purus nulla ac ante. Mauris porttitor nibh at imperdiet interdum. Nunc ut mauris quam. In sollicitudin nibh ac enim venenatis facilisis. Duis vitae tempus velit, id pharetra risus. Aenean non molestie erat. Suspendisse ac nunc est. Aenean ex quam, accumsan sit amet ultricies ac, elementum molestie tortor. Cras id semper odio. Duis egestas tellus justo, id rutrum arcu eleifend ut. Praesent sit amet est eget dui dictum pellentesque.\n\n    Cras consectetur tristique ex a euismod. Maecenas accumsan sed augue id malesuada. Donec erat turpis, interdum id vestibulum vel, lacinia a velit. Maecenas metus ipsum, suscipit id velit et, posuere efficitur eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris eu lorem elit. Pellentesque ultricies eu ipsum sodales accumsan. Pellentesque gravida sit amet nunc in condimentum.\n\n    Sed et viverra sapien. Nunc faucibus orci eu quam pharetra viverra. Pellentesque tristique pretium semper. Sed bibendum felis et lorem scelerisque efficitur. Fusce ac sem risus. Aliquam nec nisl tempor, auctor erat eu, consequat eros. Donec nec pellentesque eros. Nullam tincidunt ultricies velit vitae ullamcorper. Aenean sagittis dignissim arcu ac porttitor. Quisque ligula eros, mattis at iaculis quis, facilisis quis urna.\n\n    Nunc sed sem quis augue dapibus hendrerit ut sed orci. Proin turpis nunc, pharetra et commodo nec, rutrum sodales nibh. Etiam ultricies pulvinar ante, eget molestie libero. Fusce viverra quis lorem vitae tincidunt. Phasellus tortor metus, congue in ex ornare, euismod faucibus nisl. Ut diam lacus, porta sed elit nec, ultrices tempus magna. Fusce diam purus, viverra eu dignissim eu, malesuada sed ipsum. Nulla a aliquet nisl, quis varius leo. Nullam eget vestibulum orci. Cras at aliquam arcu. Etiam diam dolor, ullamcorper vitae malesuada nec, tristique a magna. Donec a venenatis magna. Donec a nisl id libero varius pulvinar. Aliquam consequat sapien id nunc dignissim, eget vulputate leo scelerisque. Phasellus ut fermentum nulla.\n\n    Nulla iaculis dolor venenatis elit eleifend facilisis. Cras imperdiet ac magna vitae scelerisque. Etiam non elit in velit luctus laoreet a in libero. Aliquam nec quam velit. Quisque condimentum mauris tellus, vehicula sollicitudin ipsum porta vitae. In at venenatis augue, vel venenatis ante. Aenean sit amet vulputate velit. In nec velit vel lacus hendrerit condimentum quis sed elit. Mauris at pharetra ante.");
+        LessonContentTextPanel.setWrapStyleWord(true);
+        LessonScrollPanel.setViewportView(LessonContentTextPanel);
+
+        QuizButton.setText("Take Quiz");
+        QuizButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuizButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout LessonPageLayout = new javax.swing.GroupLayout(LessonPage);
+        LessonPage.setLayout(LessonPageLayout);
+        LessonPageLayout.setHorizontalGroup(
+            LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LessonPageLayout.createSequentialGroup()
+                .addGroup(LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(LessonPageLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(QuizButton)
+                            .addComponent(LessonScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(LessonPageLayout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(LessonTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+        LessonPageLayout.setVerticalGroup(
+            LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LessonPageLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(LessonTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(LessonScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(QuizButton)
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+
+        ContentPanel.add(LessonPage, "card2");
+
+        QuizTitle.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        QuizTitle.setText("Quiz 1:");
+
+        javax.swing.GroupLayout QuizContentPanelLayout = new javax.swing.GroupLayout(QuizContentPanel);
+        QuizContentPanel.setLayout(QuizContentPanelLayout);
+        QuizContentPanelLayout.setHorizontalGroup(
+            QuizContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 524, Short.MAX_VALUE)
+        );
+        QuizContentPanelLayout.setVerticalGroup(
+            QuizContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 349, Short.MAX_VALUE)
         );
 
         QuizScrollPanel.setViewportView(QuizContentPanel);
@@ -897,7 +909,6 @@ public class EducatorUI extends javax.swing.JFrame {
 
     private void LessonsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LessonsButtonActionPerformed
         swapPanel(LessonSelectPage);
-        //LessonListPageInit(lessonlist);
     }//GEN-LAST:event_LessonsButtonActionPerformed
 
     private void ScoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScoresButtonActionPerformed
@@ -913,6 +924,7 @@ public class EducatorUI extends javax.swing.JFrame {
         swapPanel(QuizPage);
         LogOutButton.setEnabled(false);
         HomeButton.setEnabled(false);
+        QuizPageInit(currentLesson);
     }//GEN-LAST:event_QuizButtonActionPerformed
 
     private void SubmitQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitQuizButtonActionPerformed
@@ -994,6 +1006,7 @@ public class EducatorUI extends javax.swing.JFrame {
     private javax.swing.JTextArea Question3TextArea;
     private javax.swing.JButton QuizButton;
     private javax.swing.JPanel QuizContentPanel;
+    private javax.swing.JPanel QuizContentPanelOld;
     private javax.swing.JPanel QuizPage;
     private javax.swing.JScrollPane QuizScrollPanel;
     private javax.swing.JLabel QuizTitle;
@@ -1038,7 +1051,6 @@ public class EducatorUI extends javax.swing.JFrame {
             button.setText(Lesson.getLessonTitle());
             button.setLesson(Lesson);
             button.setBounds(12,12+dimy,LessonListPanel.getWidth()-24,50);
-            button.setName(Lesson.getLessonID());
             LessonListPanel.add(button);
             button.setVisible(true);
             dimy+=50;
@@ -1055,5 +1067,30 @@ public class EducatorUI extends javax.swing.JFrame {
     private void LessonPageInit(Lesson lesson) {
         LessonTitle.setText(lesson.getLessonTitle());
         LessonContentTextPanel.setText(lesson.getLessonContent());
+    }
+    
+    private void QuizPageInit(Lesson lesson) {
+        
+        Question question = new Question();
+        int dimy = 0;
+        quiz Quiz = quizzes.getQuiz(lesson.getLessonID());
+        
+        for (Iterator<Question> it = Quiz.getQuestions().iterator(); it.hasNext();) {
+            question = it.next();
+            JPanel questionpanel = new JPanel();
+            questionpanel.setBounds(12, 12+dimy, (QuizContentPanel.getWidth()-24), 50);
+            JTextArea QuestionPromptText = new JTextArea();
+            QuestionPromptText.setText(question.getQuestionPrompt());
+            QuestionPromptText.setBounds(12, 12+dimy, (questionpanel.getWidth()-24), 50);
+            
+            questionpanel.setBackground(Color.red);
+
+            questionpanel.add(QuestionPromptText);
+            QuizContentPanel.add(questionpanel);
+            questionpanel.setVisible(true);
+
+            dimy+=100;
+        }
+        QuizContentPanel.setVisible(true);
     }
 }
