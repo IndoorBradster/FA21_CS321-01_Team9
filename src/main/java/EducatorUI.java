@@ -981,6 +981,9 @@ public class EducatorUI extends javax.swing.JFrame {
         for (Iterator<Lesson> it = lessonlist.getLessons().iterator(); it.hasNext();) {
             Lesson = it.next();
             JButton button = new JButton();
+             button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+              QuizButtonActionPerformed(evt);}});
             button.setText(Lesson.getLessonTitle());
             button.setBounds(12,12+dimy,LessonListPanel.getWidth()-24,50);  
             LessonListPanel.add(button);
