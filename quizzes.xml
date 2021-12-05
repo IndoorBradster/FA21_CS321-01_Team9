@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<quizzes>
+    <quiz id="1001">
+        <question>
+			<prompt>Is this correct?</prompt>
+			<answer id = "a">No</answer>
+			<answer id = "b">No</answer>
+			<answer id = "c">Yes</answer>
+			<answer id = "d">No</answer>
+			<correctanswer>c</correctanswer>
+		</question>
+		<question>
+			<prompt>Is this correct?</prompt>
+			<answer id = "a">Yes</answer>
+			<answer id = "b">No</answer>
+			<answer id = "c">No</answer>
+			<answer id = "d">No</answer>
+			<correctanswer>a</correctanswer>
+		</question>
+    </quiz>
+
+	<quiz id="2001">
+        <question>
+			<prompt>Is this correct?</prompt>
+			<answer id = "a">No</answer>
+			<answer id = "b">Yes</answer>
+			<answer id = "c">No</answer>
+			<answer id = "d">No</answer>
+			<correctanswer>b</correctanswer>
+		</question>
+		<question>
+			<prompt>Is this correct?</prompt>
+			<answer id = "a">No</answer>
+			<answer id = "b">No</answer>
+			<answer id = "c">No</answer>
+			<answer id = "d">Yes</answer>
+			<correctanswer>d</correctanswer>
+		</question>
+    </quiz>
+</quizzes>

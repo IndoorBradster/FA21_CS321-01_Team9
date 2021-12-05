@@ -63,6 +63,31 @@ public class EducatorUI extends javax.swing.JFrame {
             //exception handling done here
         }
         
+        try {
+            File fXmlFile = new File("quizzes.xml");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = dbFactory.newDocumentBuilder();
+            Document doc = docBuilder.parse(fXmlFile);
+            doc.getDocumentElement().normalize();
+            NodeList nodeList = doc.getElementsByTagName("quizzes");
+            
+            for (int ind = 0; ind < nodeList.getLength(); ind++) {
+                Node nNode = nodeList.item(ind);
+                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                    Element tempElement = (Element) nNode;
+                    Lesson tempLesson = new Lesson();
+                    tempLesson.setLessonID(tempElement.getAttribute("id"));
+                    tempLesson.setLessonTitle(tempElement.getElementsByTagName("title").item(0).getTextContent());
+                    tempLesson.setLessonContent(tempElement.getElementsByTagName("content").item(0).getTextContent());
+                    lessonlist.addLesson(tempLesson);
+                }
+            }
+            
+        } 
+        catch (IOException | ParserConfigurationException | DOMException | SAXException e) {
+            //exception handling done here
+        }
+        
         // Import data from userlist file and updates a userlist object
         try {
             File fXmlFile = new File("users.xml");
