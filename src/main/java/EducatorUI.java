@@ -88,6 +88,8 @@ public class EducatorUI extends javax.swing.JFrame {
         catch (IOException | ParserConfigurationException | DOMException | SAXException e) {
             //exception handling done here
         }
+        
+        LessonListPageInit(lessonlist);
     }
 
     /**
@@ -314,6 +316,8 @@ public class EducatorUI extends javax.swing.JFrame {
         LessonsText.setText("Lessons");
         LessonsText.setToolTipText("");
 
+        LessonListScrollPanel.setToolTipText("");
+
         javax.swing.GroupLayout LessonListPanelLayout = new javax.swing.GroupLayout(LessonListPanel);
         LessonListPanel.setLayout(LessonListPanelLayout);
         LessonListPanelLayout.setHorizontalGroup(
@@ -322,7 +326,7 @@ public class EducatorUI extends javax.swing.JFrame {
         );
         LessonListPanelLayout.setVerticalGroup(
             LessonListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 404, Short.MAX_VALUE)
+            .addGap(0, 102, Short.MAX_VALUE)
         );
 
         LessonListScrollPanel.setViewportView(LessonListPanel);
@@ -852,7 +856,7 @@ public class EducatorUI extends javax.swing.JFrame {
 
     private void LessonsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LessonsButtonActionPerformed
         swapPanel(LessonSelectPage);
-        LessonListPageInit(lessonlist);
+        //LessonListPageInit(lessonlist);
     }//GEN-LAST:event_LessonsButtonActionPerformed
 
     private void ScoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScoresButtonActionPerformed
@@ -998,6 +1002,8 @@ public class EducatorUI extends javax.swing.JFrame {
             button.setVisible(true);
             dimy+=50;
             
+            LessonListPanel.setSize(LessonListPanel.getWidth(), LessonListPanel.getHeight()+dimy);
+            
             button.addActionListener((java.awt.event.ActionEvent evt) -> {
                 LessonActionPerformed(evt);
             });
@@ -1008,6 +1014,5 @@ public class EducatorUI extends javax.swing.JFrame {
     private void LessonPageInit(Lesson lesson) {
         LessonTitle.setText(lesson.getLessonTitle());
         LessonContentTextPanel.setText(lesson.getLessonContent());
-        LessonPage.updateUI();
     }
 }

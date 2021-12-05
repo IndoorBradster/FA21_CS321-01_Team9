@@ -307,6 +307,9 @@
               </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="LessonListScrollPanel">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
