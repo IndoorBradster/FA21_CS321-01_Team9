@@ -15,11 +15,13 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 public class EducatorUI extends javax.swing.JFrame {
 
     private JPanel currentPage;
-    private LessonList lessonlist = new LessonList();  
+    private LessonList lessonlist = new LessonList();
+    private Lesson currentLesson = new Lesson();
     private UserList UserList = new UserList();
     
     /**
@@ -200,6 +202,7 @@ public class EducatorUI extends javax.swing.JFrame {
         PasswordLabel.setText("Password:");
 
         LoginButton.setText("Login");
+        LoginButton.setName(""); // NOI18N
         LoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginButtonActionPerformed(evt);
@@ -875,6 +878,11 @@ public class EducatorUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Question1Option3ActionPerformed
 
+    private void LessonActionPerformed(ActionEvent evt) {
+        LessonButton lessonbutton = (LessonButton) evt.getSource();
+        currentLesson = (Lesson) lessonbutton.getLesson();
+        swapPanel(LessonPage);
+    }
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup ButtonGroup_QuizQuestion1;
@@ -980,15 +988,17 @@ public class EducatorUI extends javax.swing.JFrame {
         int dimy = 0;
         for (Iterator<Lesson> it = lessonlist.getLessons().iterator(); it.hasNext();) {
             Lesson = it.next();
-            JButton button = new JButton();
-             button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-              QuizButtonActionPerformed(evt);}});
+            LessonButton button = new LessonButton();
             button.setText(Lesson.getLessonTitle());
-            button.setBounds(12,12+dimy,LessonListPanel.getWidth()-24,50);  
+            button.setBounds(12,12+dimy,LessonListPanel.getWidth()-24,50);
+            button.setName(Lesson.getLessonID());
             LessonListPanel.add(button);
             button.setVisible(true);
             dimy+=50;
+            
+            button.addActionListener((java.awt.event.ActionEvent evt) -> {
+                LessonActionPerformed(evt);
+            });
         }
         LessonListPanel.setVisible(true);
     }
