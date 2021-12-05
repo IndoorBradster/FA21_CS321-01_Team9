@@ -525,6 +525,10 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JTextField" name="UsernameField">
+                  <Events>
+                    <EventHandler event="inputMethodTextChanged" listener="java.awt.event.InputMethodListener" parameters="java.awt.event.InputMethodEvent" handler="UsernameFieldInputMethodTextChanged"/>
+                    <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="UsernameFieldKeyTyped"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JPasswordField" name="PasswordField">
                 </Component>
@@ -696,21 +700,16 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="QuizButton" min="-2" max="-2" attributes="0"/>
-                                  <Component id="LessonScrollPanel" min="-2" pref="527" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                              <Component id="LessonTitle" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="LessonTitle" alignment="0" min="-2" pref="211" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="QuizButton" min="-2" max="-2" attributes="0"/>
+                              <Component id="LessonScrollPanel" pref="527" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="50" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -720,10 +719,10 @@
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="LessonTitle" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="LessonScrollPanel" min="-2" pref="352" max="-2" attributes="0"/>
+                      <Component id="LessonScrollPanel" pref="352" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="QuizButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -770,21 +769,16 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="SubmitQuizButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="QuizScrollPanel" alignment="1" min="-2" pref="527" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                              <Component id="QuizTitle" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="QuizTitle" alignment="0" min="-2" pref="211" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="SubmitQuizButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="QuizScrollPanel" alignment="1" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="50" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -794,10 +788,10 @@
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="QuizTitle" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="QuizScrollPanel" min="-2" pref="352" max="-2" attributes="0"/>
+                      <Component id="QuizScrollPanel" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="SubmitQuizButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -850,32 +844,32 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="279" max="-2" attributes="0"/>
-                      <Component id="GradeBookLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="295" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="GradeBookScrollPanel" pref="603" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="GradeBookScrollPanel" pref="603" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace pref="287" max="32767" attributes="0"/>
+                          <Component id="GradeBookLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="287" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="GradeBookLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="464" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="GradeBookScrollPanel" pref="429" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="46" max="32767" attributes="0"/>
-                          <Component id="GradeBookScrollPanel" min="-2" pref="429" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <Component id="GradeBookLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="472" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>

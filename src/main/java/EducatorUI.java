@@ -20,10 +20,10 @@ import java.awt.event.ActionEvent;
 public class EducatorUI extends javax.swing.JFrame {
 
     private JPanel currentPage;
-    private LessonList lessonlist = new LessonList();
-    private QuizList quizzes = new QuizList();
+    private final LessonList lessonlist = new LessonList();
+    private final QuizList quizzes = new QuizList();
     private Lesson currentLesson = new Lesson();
-    private UserList UserList = new UserList();
+    private final UserList UserList = new UserList();
     
     /**
      * Creates new form ContactEditorUI
@@ -444,6 +444,19 @@ public class EducatorUI extends javax.swing.JFrame {
         LoginPromptText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoginPromptText.setText("Please Login");
 
+        UsernameField.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                UsernameFieldInputMethodTextChanged(evt);
+            }
+        });
+        UsernameField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                UsernameFieldKeyTyped(evt);
+            }
+        });
+
         UsernameLabel.setText("Username:");
 
         PasswordLabel.setText("Password:");
@@ -627,16 +640,13 @@ public class EducatorUI extends javax.swing.JFrame {
         LessonPageLayout.setHorizontalGroup(
             LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LessonPageLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
                 .addGroup(LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(LessonPageLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(QuizButton)
-                            .addComponent(LessonScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(LessonPageLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(LessonTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                    .addComponent(LessonTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(QuizButton)
+                        .addComponent(LessonScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE)))
+                .addGap(50, 50, 50))
         );
         LessonPageLayout.setVerticalGroup(
             LessonPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -644,10 +654,10 @@ public class EducatorUI extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addComponent(LessonTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LessonScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LessonScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(QuizButton)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addGap(52, 52, 52))
         );
 
         ContentPanel.add(LessonPage, "card2");
@@ -680,16 +690,13 @@ public class EducatorUI extends javax.swing.JFrame {
         QuizPageLayout.setHorizontalGroup(
             QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(QuizPageLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
                 .addGroup(QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(QuizPageLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(SubmitQuizButton)
-                            .addComponent(QuizScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(QuizPageLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(QuizTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(50, Short.MAX_VALUE))
+                    .addComponent(QuizTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(SubmitQuizButton)
+                        .addComponent(QuizScrollPanel)))
+                .addGap(50, 50, 50))
         );
         QuizPageLayout.setVerticalGroup(
             QuizPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -697,10 +704,10 @@ public class EducatorUI extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addComponent(QuizTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(QuizScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(QuizScrollPanel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SubmitQuizButton)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addGap(52, 52, 52))
         );
 
         ContentPanel.add(QuizPage, "card2");
@@ -849,26 +856,26 @@ public class EducatorUI extends javax.swing.JFrame {
         GradeBookPageLayout.setHorizontalGroup(
             GradeBookPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GradeBookPageLayout.createSequentialGroup()
-                .addGap(279, 279, 279)
-                .addComponent(GradeBookLabel)
-                .addContainerGap(295, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(GradeBookScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(GradeBookPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(GradeBookPageLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(GradeBookScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
-                    .addContainerGap()))
+                    .addContainerGap(287, Short.MAX_VALUE)
+                    .addComponent(GradeBookLabel)
+                    .addContainerGap(287, Short.MAX_VALUE)))
         );
         GradeBookPageLayout.setVerticalGroup(
             GradeBookPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GradeBookPageLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(GradeBookLabel)
-                .addContainerGap(464, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GradeBookPageLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(GradeBookScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
+                .addGap(24, 24, 24))
             .addGroup(GradeBookPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GradeBookPageLayout.createSequentialGroup()
-                    .addContainerGap(46, Short.MAX_VALUE)
-                    .addComponent(GradeBookScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(24, 24, 24)))
+                .addGroup(GradeBookPageLayout.createSequentialGroup()
+                    .addGap(12, 12, 12)
+                    .addComponent(GradeBookLabel)
+                    .addContainerGap(472, Short.MAX_VALUE)))
         );
 
         ContentPanel.add(GradeBookPage, "card2");
@@ -934,6 +941,15 @@ public class EducatorUI extends javax.swing.JFrame {
     private void Question1Option3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question1Option3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Question1Option3ActionPerformed
+
+    private void UsernameFieldInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_UsernameFieldInputMethodTextChanged
+        
+        String Username = (String) evt.getText().toString();
+    }//GEN-LAST:event_UsernameFieldInputMethodTextChanged
+
+    private void UsernameFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UsernameFieldKeyTyped
+        String UsernameKeys = (String) evt.toString();
+    }//GEN-LAST:event_UsernameFieldKeyTyped
 
     private void LessonActionPerformed(ActionEvent evt) {
         LessonButton lessonbutton = (LessonButton) evt.getSource();
@@ -1043,7 +1059,7 @@ public class EducatorUI extends javax.swing.JFrame {
 
     private void LessonListPageInit(LessonList lessonlist) {
 
-        Lesson Lesson = new Lesson();
+        Lesson Lesson;
         int dimy = 0;
         for (Iterator<Lesson> it = lessonlist.getLessons().iterator(); it.hasNext();) {
             Lesson = it.next();
@@ -1071,12 +1087,16 @@ public class EducatorUI extends javax.swing.JFrame {
     
     private void QuizPageInit(Lesson lesson) {
         
-        Question question = new Question();
+        Question question;
         int dimy = 0;
         quiz Quiz = quizzes.getQuiz(lesson.getLessonID());
+        QuizTitle.setText(lesson.getLessonTitle());
+        QuizContentPanel.removeAll();
+        QuizContentPanel.revalidate();
         
         for (Iterator<Question> it = Quiz.getQuestions().iterator(); it.hasNext();) {
             question = it.next();
+            
             JPanel questionpanel = new JPanel();
             questionpanel.setBounds(12, 12+dimy, (QuizContentPanel.getWidth()-24), 50);
             JTextArea QuestionPromptText = new JTextArea();
@@ -1088,6 +1108,28 @@ public class EducatorUI extends javax.swing.JFrame {
             questionpanel.add(QuestionPromptText);
             QuizContentPanel.add(questionpanel);
             questionpanel.setVisible(true);
+            
+            // Radio Buttons
+            ButtonGroup bg = new ButtonGroup();
+            
+            JRadioButton answera = new JRadioButton();
+            answera.setText(question.getOptionA());
+            JRadioButton answerb = new JRadioButton();
+            answerb.setText(question.getOptionB());
+            JRadioButton answerc = new JRadioButton();
+            answerc.setText(question.getOptionC());
+            JRadioButton answerd = new JRadioButton();
+            answerd.setText(question.getOptionD());
+            
+            bg.add(answera);
+            bg.add(answerb);
+            bg.add(answerc);
+            bg.add(answerd);
+            
+            questionpanel.add(answera);
+            questionpanel.add(answerb);
+            questionpanel.add(answerc);
+            questionpanel.add(answerd);
 
             dimy+=100;
         }

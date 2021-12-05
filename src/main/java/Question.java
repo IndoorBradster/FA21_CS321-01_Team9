@@ -121,7 +121,11 @@ public class Question {
     public String getOptionC() {
         return OptionC;
     }
-
+    
+            
+    public String getOptionD() {
+        return OptionD;
+    }
 /** Get correctAnswer for the question
  * @return correctAnswer
  *  
