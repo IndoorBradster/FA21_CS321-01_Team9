@@ -28,13 +28,11 @@ public class LessonList {
  * @param lesson Lesson to be removed
  *  
 */
-
     public void removeLesson(Lesson lesson) {
         LessonList.remove(lesson);
     }
 
 /** Gets List of lesson titles
- * 
  * @return Titles 
 */
     public List<String> getLessonTitles() {
@@ -51,11 +49,15 @@ public class LessonList {
         }
         return Titles;
     }
-
+/** Gets the number of items in the lesson list
+ * @return LessonList.size 
+*/
     public int getLength() {
         return LessonList.size();
     }
-    
+/**Returns the entire list of lessons
+ * @return LessonList 
+*/  
     public List<Lesson> getLessons() {
         return LessonList;
     }
