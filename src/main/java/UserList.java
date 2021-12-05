@@ -6,8 +6,8 @@ import java.util.HashMap;
 *Stores all users of the program in a list 
 *
 */
-public class UserList {
-    private final HashMap<String, accountcontrol> UserList = new HashMap<>();
+public class UserList extends HashMap<String, accountcontrol>{
+    //private final HashMap<String, accountcontrol> UserList = new HashMap<>();
     
 
 /**
@@ -23,8 +23,13 @@ public class UserList {
 * @param account accountcontrol object
 */    
     public void addUser(String accountname, accountcontrol account) {
-        UserList.put(accountname, account);
+        this.put(accountname, account);
     }
+    
+//    @Override
+//    public int size() {
+//        return this.size();
+//    }
 
 /**
 *Checks to see if passwords match
@@ -33,9 +38,8 @@ public class UserList {
 * @return account
 * @return null 
 */ 
-    
     public accountcontrol getUser(String username, String password) {
-        accountcontrol account = UserList.get(username);
+        accountcontrol account = this.get(username);
         if (account.getPassword().equals(password)) {
             return account;
         }

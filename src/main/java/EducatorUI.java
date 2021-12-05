@@ -16,6 +16,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.util.Arrays;
 
 public class EducatorUI extends javax.swing.JFrame {
 
@@ -23,7 +24,10 @@ public class EducatorUI extends javax.swing.JFrame {
     private final LessonList lessonlist = new LessonList();
     private final QuizList quizzes = new QuizList();
     private Lesson currentLesson = new Lesson();
-    private final UserList UserList = new UserList();
+    private UserList UserList = new UserList();
+    private accountcontrol currentUser = new accountcontrol();
+    private String currentUsername;
+    private String temppassword;
     
     /**
      * Creates new form ContactEditorUI
@@ -129,7 +133,7 @@ public class EducatorUI extends javax.swing.JFrame {
         catch (IOException | ParserConfigurationException | DOMException | SAXException e) {
             //exception handling done here
         }
-        
+        LoginError.setVisible(false);
         LessonListPageInit(lessonlist);
     }
 
@@ -181,6 +185,7 @@ public class EducatorUI extends javax.swing.JFrame {
         UsernameLabel = new javax.swing.JLabel();
         PasswordLabel = new javax.swing.JLabel();
         LoginButton = new javax.swing.JButton();
+        LoginError = new javax.swing.JLabel();
         HomePage = new javax.swing.JPanel();
         WelcomeTitle = new javax.swing.JLabel();
         LessonsButton = new javax.swing.JButton();
@@ -469,6 +474,10 @@ public class EducatorUI extends javax.swing.JFrame {
             }
         });
 
+        LoginError.setForeground(new java.awt.Color(255, 0, 0));
+        LoginError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LoginError.setText("Incorrect Username or Password. Please try again.");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -484,7 +493,8 @@ public class EducatorUI extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(PasswordField)
                         .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
+            .addComponent(LoginError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -501,7 +511,9 @@ public class EducatorUI extends javax.swing.JFrame {
                         .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LoginButton)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(LoginError)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout LoginPageLayout = new javax.swing.GroupLayout(LoginPage);
@@ -522,7 +534,7 @@ public class EducatorUI extends javax.swing.JFrame {
                 .addComponent(LoginPromptText)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(315, Short.MAX_VALUE))
+                .addContainerGap(294, Short.MAX_VALUE))
         );
 
         ContentPanel.add(LoginPage, "card2");
@@ -907,6 +919,7 @@ public class EducatorUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void LogOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutButtonActionPerformed
+        currentUser = null;
         swapPanel(LoginPage);
     }//GEN-LAST:event_LogOutButtonActionPerformed
 
@@ -923,8 +936,13 @@ public class EducatorUI extends javax.swing.JFrame {
     }//GEN-LAST:event_ScoresButtonActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-        swapPanel(HomePage);
-        LogOutButton.setEnabled(true);
+        try {
+            currentUser = UserList.getUser(UsernameField.getText(), String.valueOf(PasswordField.getPassword()));
+            swapPanel(HomePage);
+            LogOutButton.setEnabled(true);
+        } catch (NullPointerException e) {
+            LoginError.setVisible(true);
+        }   
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void QuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuizButtonActionPerformed
@@ -992,6 +1010,7 @@ public class EducatorUI extends javax.swing.JFrame {
     private javax.swing.JLabel LessonsText;
     private javax.swing.JButton LogOutButton;
     private javax.swing.JButton LoginButton;
+    private javax.swing.JLabel LoginError;
     private javax.swing.JPanel LoginPage;
     private javax.swing.JLabel LoginPromptText;
     private javax.swing.JPasswordField PasswordField;
