@@ -25,12 +25,12 @@
         <content>For English sentences, the two basic parts of a sentence are the subject and the predicate. While there can be more specific sentence components, these are the simplest. 
 
 1. Subject : The person, place or thing (noun) that the sentence is about.         
- a.Sarah bought a car.- Sarah is the subject             
- b.The cat is asleep. - The cat is the subject
+    a.Sarah bought a car.- Sarah is the subject             
+    b.The cat is asleep. - The cat is the subject
                   
 2. Predicate : The action or state of being (verb).
- a.Sarah bought a car.- ‘bought a car’ is the predicate          
- b.The cat is asleep. - ‘is asleep’ is the predicate
+    a.Sarah bought a car.- ‘bought a car’ is the predicate          
+    b.The cat is asleep. - ‘is asleep’ is the predicate
 </content>
     </lesson>
 	
@@ -39,23 +39,23 @@
         <content>A noun is a word (other than a pronoun) used to identify any of a class of people, places, or things ( common noun ), or to name a particular one of these (proper noun). There is not one general rule for pluralizing all nouns. Some plural word forms depend on the ending of the singular form and other words are completely transformed when in plural form. Here are a few of the general rules: 
 
 1. For most words, just add an ‘s’ at the end
-a. Student - students
-b. Pencil - pencils
+    a. Student - students
+    b. Pencil - pencils
             
 2. For nouns that end in ch, x, s, or s sounds, add es
-a. coach - coaches
-b. Box - boxes
-c. Bus- busses
+    a. coach - coaches
+    b. Box - boxes
+    c. Bus- busses
             
 3. For some nouns that end in y, drop the y and add ‘ies’ 
-a. Lady- ladies
-b. Body- bodies
+    a. Lady- ladies
+    b. Body- bodies
             
 4.Some nouns are transformed…or dont change at all:
-a. Goose - geese
-b. Sheep- sheep
-c. Leaf-leaves
-d. Man-men 
+    a. Goose - geese
+    b. Sheep- sheep
+    c. Leaf-leaves
+    d. Man-men 
             
 Conclusively, while there are some general trends to follow when pluralizing English nouns, there is no one size fits all rule for all nouns. 
 
@@ -63,17 +63,56 @@ Conclusively, while there are some general trends to follow when pluralizing Eng
     </lesson>
     <lesson id="4001">
         <title>Lesson 4:Tenses</title>
-        <content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</content>
+        <content>The tense of a verb tells you when it happened. There are three tense forms of each word:
+1. Past - the action has already happened
+    a. walked 
+    b. Slept
+    c. drew
+            
+2. Present - the action is happening now
+    a. Walk
+    b. Sleep
+    c. draw
+            
+3. Future - the action will happen at another time
+    a. (will) walk
+    b. (will) sleep
+    c. (will) draw
+            
+The rules:
+1. Past - Typically add ‘ed’ at the end of the word but not always
+2. Present - this form is always the original form of the word
+3. Future - this form is the original form of the word and needs a ‘will’
+</content>
     </lesson>
 	
 	<lesson id="5001">
-        <title>Lesson 2: Testing</title>
-        <content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</content>
+        <title>Lesson 5: Possessive Nouns</title>
+        <content>The possessive form of a noun signifies that the person, place or thing has ownership of some object. The rules for possessive nouns are fairly straight forward:	
+1. If the noun is singular then add ‘s at the end.
+    a. Sarah’s cat - Sarah is one person
+2. If the noun already ends in s or is plural and ends in, then just add an apostrophe at the end.
+    a. Students’ - this refers to multiple students
+3. For multiple people who own the same object, only the last noun listed needs to be modified. 
+    a. John and Jane’s 
+</content>
     </lesson>
 	
 	<lesson id="6001">
-        <title>Lesson 2: Testing</title>
-        <content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</content>
+        <title>Lesson 6 : Pronouns </title>
+        <content>Simply put, a pronoun takes the place of a noun or a noun phrase. Pronouns help to reduce the repetitiveness in writing or speaking proper nouns over and over again. 
+
+1. Personal: takes the place of a the proper noun that refers to a living being or beings 
+    a. She, her, him, he, they, them, you, I 
+    b. She likes to swim.
+    c. They go skiing together. 
+    d. I like to read sci-fi novels. 
+
+In all of these examples, the noun can be replaced with a proper noun. 
+    a. Sarah likes to swim.
+    b. Tom and Bob go skiing together. 
+    c. Rachel likes to read sci-fi novels.
+</content>
     </lesson>
 	
 	<lesson id="7001">
