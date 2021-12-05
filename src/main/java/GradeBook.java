@@ -20,8 +20,8 @@ public class GradeBook {
      * @param LessonID
      * @return  int Score**/
     public int getGrade(String LessonID) {
-        Grade grade = GradeBook.get(LessonID);
-        return grade.getGrade();
+        int grade = GradeBook.get(LessonID).getGrade();
+        return grade;
     }
     
     /** Return the int value of the size of the GradeBook.

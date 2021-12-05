@@ -18,6 +18,7 @@ import org.xml.sax.SAXException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.Arrays;
+import java.util.Set;
 
 public class EducatorUI extends javax.swing.JFrame {
 
@@ -209,18 +210,6 @@ public class EducatorUI extends javax.swing.JFrame {
         GradeBookLabel = new javax.swing.JLabel();
         GradeBookScrollPanel = new javax.swing.JScrollPane();
         GradeBookPanel = new javax.swing.JPanel();
-        Lesson1GradePanel = new javax.swing.JPanel();
-        Lesson1GradeBookTitle = new javax.swing.JLabel();
-        Lesson1GradeBookScore = new javax.swing.JLabel();
-        Lesson2GradePanel = new javax.swing.JPanel();
-        Lesson2GradeBookTitle = new javax.swing.JLabel();
-        Lesson2GradeBookScore = new javax.swing.JLabel();
-        Lesson3GradePanel = new javax.swing.JPanel();
-        Lesson3GradeBookTitle = new javax.swing.JLabel();
-        Lesson3GradeBookScore = new javax.swing.JLabel();
-        Lesson4GradePanel = new javax.swing.JPanel();
-        Lesson4GradeBookTitle = new javax.swing.JLabel();
-        Lesson4GradeBookScore = new javax.swing.JLabel();
 
         Question1Label.setText("Question 1:");
 
@@ -727,139 +716,15 @@ public class EducatorUI extends javax.swing.JFrame {
 
         GradeBookLabel.setText("Gradebook");
 
-        Lesson1GradePanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        Lesson1GradeBookTitle.setText("Lesson 1:");
-
-        Lesson1GradeBookScore.setText("80");
-
-        javax.swing.GroupLayout Lesson1GradePanelLayout = new javax.swing.GroupLayout(Lesson1GradePanel);
-        Lesson1GradePanel.setLayout(Lesson1GradePanelLayout);
-        Lesson1GradePanelLayout.setHorizontalGroup(
-            Lesson1GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lesson1GradePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Lesson1GradeBookTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 361, Short.MAX_VALUE)
-                .addComponent(Lesson1GradeBookScore, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        Lesson1GradePanelLayout.setVerticalGroup(
-            Lesson1GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lesson1GradePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Lesson1GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lesson1GradeBookTitle)
-                    .addComponent(Lesson1GradeBookScore))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        Lesson2GradePanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        Lesson2GradeBookTitle.setText("Lesson 2:");
-
-        Lesson2GradeBookScore.setText("80");
-
-        javax.swing.GroupLayout Lesson2GradePanelLayout = new javax.swing.GroupLayout(Lesson2GradePanel);
-        Lesson2GradePanel.setLayout(Lesson2GradePanelLayout);
-        Lesson2GradePanelLayout.setHorizontalGroup(
-            Lesson2GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lesson2GradePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Lesson2GradeBookTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 361, Short.MAX_VALUE)
-                .addComponent(Lesson2GradeBookScore, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        Lesson2GradePanelLayout.setVerticalGroup(
-            Lesson2GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lesson2GradePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Lesson2GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lesson2GradeBookTitle)
-                    .addComponent(Lesson2GradeBookScore))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        Lesson3GradePanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        Lesson3GradeBookTitle.setText("Lesson 3:");
-
-        Lesson3GradeBookScore.setText("80");
-
-        javax.swing.GroupLayout Lesson3GradePanelLayout = new javax.swing.GroupLayout(Lesson3GradePanel);
-        Lesson3GradePanel.setLayout(Lesson3GradePanelLayout);
-        Lesson3GradePanelLayout.setHorizontalGroup(
-            Lesson3GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lesson3GradePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Lesson3GradeBookTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 361, Short.MAX_VALUE)
-                .addComponent(Lesson3GradeBookScore, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        Lesson3GradePanelLayout.setVerticalGroup(
-            Lesson3GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lesson3GradePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Lesson3GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lesson3GradeBookTitle)
-                    .addComponent(Lesson3GradeBookScore))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        Lesson4GradePanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        Lesson4GradeBookTitle.setText("Lesson 4:");
-
-        Lesson4GradeBookScore.setText("80");
-
-        javax.swing.GroupLayout Lesson4GradePanelLayout = new javax.swing.GroupLayout(Lesson4GradePanel);
-        Lesson4GradePanel.setLayout(Lesson4GradePanelLayout);
-        Lesson4GradePanelLayout.setHorizontalGroup(
-            Lesson4GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lesson4GradePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Lesson4GradeBookTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 361, Short.MAX_VALUE)
-                .addComponent(Lesson4GradeBookScore, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        Lesson4GradePanelLayout.setVerticalGroup(
-            Lesson4GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Lesson4GradePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Lesson4GradePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lesson4GradeBookTitle)
-                    .addComponent(Lesson4GradeBookScore))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout GradeBookPanelLayout = new javax.swing.GroupLayout(GradeBookPanel);
         GradeBookPanel.setLayout(GradeBookPanelLayout);
         GradeBookPanelLayout.setHorizontalGroup(
             GradeBookPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GradeBookPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(GradeBookPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Lesson1GradePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Lesson3GradePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Lesson4GradePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Lesson2GradePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(28, Short.MAX_VALUE))
+            .addGap(0, 600, Short.MAX_VALUE)
         );
         GradeBookPanelLayout.setVerticalGroup(
             GradeBookPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GradeBookPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Lesson1GradePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Lesson2GradePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Lesson3GradePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Lesson4GradePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(395, Short.MAX_VALUE))
+            .addGap(0, 426, Short.MAX_VALUE)
         );
 
         GradeBookScrollPanel.setViewportView(GradeBookPanel);
@@ -960,6 +825,8 @@ public class EducatorUI extends javax.swing.JFrame {
         Grade grade = new Grade();
         grade.setGrade(LessonID, score);
         currentUser.addGrade(LessonID, grade);
+        
+        initGradeBookPage();
         swapPanel(GradeBookPage);
         
     }//GEN-LAST:event_SubmitQuizButtonActionPerformed
@@ -995,18 +862,6 @@ public class EducatorUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane GradeBookScrollPanel;
     private javax.swing.JButton HomeButton;
     private javax.swing.JPanel HomePage;
-    private javax.swing.JLabel Lesson1GradeBookScore;
-    private javax.swing.JLabel Lesson1GradeBookTitle;
-    private javax.swing.JPanel Lesson1GradePanel;
-    private javax.swing.JLabel Lesson2GradeBookScore;
-    private javax.swing.JLabel Lesson2GradeBookTitle;
-    private javax.swing.JPanel Lesson2GradePanel;
-    private javax.swing.JLabel Lesson3GradeBookScore;
-    private javax.swing.JLabel Lesson3GradeBookTitle;
-    private javax.swing.JPanel Lesson3GradePanel;
-    private javax.swing.JLabel Lesson4GradeBookScore;
-    private javax.swing.JLabel Lesson4GradeBookTitle;
-    private javax.swing.JPanel Lesson4GradePanel;
     private javax.swing.JTextArea LessonContentTextPanel;
     private javax.swing.JPanel LessonListPanel;
     private javax.swing.JScrollPane LessonListScrollPanel;
@@ -1136,31 +991,41 @@ public class EducatorUI extends javax.swing.JFrame {
             questionpanel.add(QuestionPromptText);
             QuizContentPanel.add(questionpanel);
             questionpanel.setVisible(true);
-            
-//            // Radio Buttons
-//            ButtonGroup bg = new ButtonGroup();
-//            
-//            JRadioButton answera = new JRadioButton();
-//            answera.setText(question.getOptionA());
-//            JRadioButton answerb = new JRadioButton();
-//            answerb.setText(question.getOptionB());
-//            JRadioButton answerc = new JRadioButton();
-//            answerc.setText(question.getOptionC());
-//            JRadioButton answerd = new JRadioButton();
-//            answerd.setText(question.getOptionD());
-//            
-//            bg.add(answera);
-//            bg.add(answerb);
-//            bg.add(answerc);
-//            bg.add(answerd);
-//            
-//            questionpanel.add(answera);
-//            questionpanel.add(answerb);
-//            questionpanel.add(answerc);
-//            questionpanel.add(answerd);
 
             dimy+=100;
         }
         QuizContentPanel.setVisible(true);
+    }
+    
+    private void initGradeBookPage() {
+        Lesson Lesson;
+        int dimy = 0;
+        for (Iterator<Lesson> it = lessonlist.getLessons().iterator(); it.hasNext();) {
+            Lesson = it.next();
+            JPanel gradePanel = new JPanel();
+            gradePanel.setBounds(12, 12+dimy, (GradeBookPanel.getWidth()-24), 30);
+            JLabel gradeLessonLabel = new JLabel(Lesson.getLessonTitle(), SwingConstants.RIGHT);
+            gradeLessonLabel.setBounds(12, 12+dimy, 15, 35);
+            
+            JLabel gradeScoreLabel = new JLabel();
+            gradeLessonLabel.setText(Lesson.getLessonTitle());
+            try {
+                String gradeScoreText = String.valueOf(currentUser.getGrade(Lesson.getLessonID()));
+                gradeScoreLabel.setText(gradeScoreText);
+            }
+            catch(NullPointerException e) {
+                gradeScoreLabel.setText("--");
+            }
+
+            gradePanel.add(gradeLessonLabel);
+            gradePanel.add(gradeScoreLabel);
+            gradeLessonLabel.setAlignmentX(Component.RIGHT_ALIGNMENT);
+            
+            gradePanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+            GradeBookPanel.add(gradePanel);
+            gradeLessonLabel.updateUI();
+            dimy+=42;
+        }
     }
 }
