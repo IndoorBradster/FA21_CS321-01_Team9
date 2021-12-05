@@ -10,22 +10,22 @@
 			<answer id = "a">outside</answer>
 			<correctanswer>d</correctanswer>
 		</question>
-		<question type="mc">
+                <question type="mc">
 			<questionnumber>2</questionnumber>
-			<prompt>For the following statement, what is "sings in the choir"? My sister sings in the choir. </prompt>
+			<prompt>For the following statement, what part of speech is "under"? My cat likes to hide under the bed. </prompt>
 			<answer id = "a">preposistion</answer>
-			<answer id = "b">subject</answer>
-			<answer id = "c">predicate</answer>
-			<answer id = "a">none of the above</answer>
-			<correctanswer>c</correctanswer>
+			<answer id = "b">adverb</answer>
+			<answer id = "c">noun</answer>
+			<answer id = "a">pronoun</answer>
+			<correctanswer>a</correctanswer>
 		</question>
                 <question type="mc">
-			<questionnumber>3</questionnumber>
-			<prompt>For the following statement, what is the predicate? On Tuesday, I will be leaving for a roadtrip. </prompt>
-			<answer id = "a">leaving for a roadtrip</answer>
-			<answer id = "b">Tuesday</answer>
-			<answer id = "c">I</answer>
-			<answer id = "a">will be</answer>
+                <questionnumber>3</questionnumber>
+			<prompt>For the following statement, what part of speech is "quitely"? I tiptoed out of the room so I would not disturb anyone.</prompt>
+			<answer id = "a">preposistion</answer>
+			<answer id = "b">adverb</answer>
+			<answer id = "c">noun</answer>
+			<answer id = "a">pronoun</answer>
 			<correctanswer>b</correctanswer>
 		</question>
                     <question type="mc">
@@ -50,52 +50,99 @@
 
 	<quiz id="2001">
         <question type="mc" number="1">
-					<questionnumber>1</questionnumber>
-			<prompt>For the following statement, what part of speech is "dog"? The dog likes to play fetch outside.</prompt>
+                        <questionnumber>1</questionnumber>
+			<prompt>For the following statement, what part of the sentence is "play fetch outside"? The dog likes to play fetch outside.</prompt>
 			<answer id = "a">preposistion</answer>
-			<answer id = "b">adverb</answer>
-			<answer id = "c">noun</answer>
+			<answer id = "b">subject</answer>
+			<answer id = "c">predicate</answer>
 			<answer id = "a">pronoun</answer>
 			<correctanswer>c</correctanswer>
 		</question>
-		<question type="mc">
-			<questionnumber>2</questionnumber>
-			<prompt>For the following statement, what part of speech is "under"? My cat likes to hide under the bed. </prompt>
+                <question type="mc">
+                        <questionnumber>2</questionnumber>
+			<prompt>For the following statement, what is "sings in the choir"? My sister sings in the choir. </prompt>
 			<answer id = "a">preposistion</answer>
-			<answer id = "b">adverb</answer>
-			<answer id = "c">noun</answer>
-			<answer id = "a">pronoun</answer>
-			<correctanswer>a</correctanswer>
+			<answer id = "b">subject</answer>
+			<answer id = "c">predicate</answer>
+			<answer id = "a">none of the above</answer>
+			<correctanswer>c</correctanswer>
 		</question>
                 <question type="mc">
-			<questionnumber>3</questionnumber>
-			<prompt>For the following statement, what part of speech is "quitely"? I tiptoed out of the room so I would not disturb anyone.</prompt>
+                        <questionnumber>3</questionnumber>
+			<prompt>For the following statement, what part of the sentence is "dog"? The dog likes to play fetch outside.</prompt>
 			<answer id = "a">preposistion</answer>
-			<answer id = "b">adverb</answer>
-			<answer id = "c">noun</answer>
+			<answer id = "b">subject</answer>
+			<answer id = "c">predicate</answer>
 			<answer id = "a">pronoun</answer>
 			<correctanswer>b</correctanswer>
 		</question>
+                <question type="mc">
+                        <questionnumber>4</questionnumber>
+			<prompt>For the following statement, what is the predicate? On Tuesday, I will be leaving for a roadtrip. </prompt>
+			<answer id = "a">leaving for a roadtrip</answer>
+			<answer id = "b">Tuesday</answer>
+			<answer id = "c">I</answer>
+			<answer id = "a">will be</answer>
+			<correctanswer>b</correctanswer>
+		</question>
+                <question type="mc">
+                	<questionnumber>5</questionnumber>
+			<prompt>For the following statement, what is the subject On Tuesday, I will be leaving for a roadtrip. </prompt>
+			<answer id = "a">leaving for a roadtrip</answer>
+			<answer id = "b">Tuesday</answer>
+			<answer id = "c">I</answer>
+			<answer id = "a">will be</answer>
+			<correctanswer>c</correctanswer>
+		</question>
+
+                
 
     </quiz>
     <quiz id="3001">
         <question type="mc" number="1">
 			<questionnumber>1</questionnumber>
-			<prompt>Is ths correct?</prompt>
-			<answer id = "a">No</answer>
-			<answer id = "b">Yes</answer>
-			<answer id = "c">No</answer>
-			<answer id = "d">No</answer>
+			<prompt>What is the plural form of: toy? </prompt>
+			<answer id = "a">toy</answer>
+			<answer id = "b">toys</answer>
+			<answer id = "c">toyes</answer>
+			<answer id = "d">toyies</answer>
 			<correctanswer>b</correctanswer>
 		</question>
 		<question type="mc">
 			<questionnumber>2</questionnumber>
-			<prompt>Iss correct?</prompt>
-			<answer id = "a">No</answer>
-			<answer id = "b">No</answer>
-			<answer id = "c">No</answer>
-			<answer id = "d">Yes</answer>
+			<prompt>What is the plural form of: child?</prompt>
+			<answer id = "a">childs</answer>
+			<answer id = "b">childes</answer>
+			<answer id = "c">child</answer>
+			<answer id = "d">children</answer>
 			<correctanswer>d</correctanswer>
+		</question>
+                <question type="mc">
+			<questionnumber>3</questionnumber>
+			<prompt>What is the plural form of: sky?</prompt>
+			<answer id = "a">skys</answer>
+			<answer id = "b">skyes</answer>
+			<answer id = "c">skies</answer>
+			<answer id = "d">sky</answer>
+			<correctanswer>c</correctanswer>
+		</question>
+                <question type="mc">
+			<questionnumber>4</questionnumber>
+			<prompt>What is the plural form of: sheep</prompt>
+			<answer id = "a">sheep</answer>
+			<answer id = "b">sheeps</answer>
+			<answer id = "c">shipes</answer>
+			<answer id = "d">sheeps</answer>
+			<correctanswer>a</correctanswer>
+		</question>
+                <question type="mc">
+			<questionnumber>5</questionnumber>
+			<prompt>What is the plural form of: woman</prompt>
+			<answer id = "a">womans</answer>
+			<answer id = "b">women</answer>
+			<answer id = "c">womanes</answer>
+			<answer id = "d">woman</answer>
+			<correctanswer>b</correctanswer>
 		</question>
     </quiz>
     <quiz id="4001">
@@ -150,42 +197,98 @@
     <quiz id="5001">
         <question type="mc" number="1">
 			<questionnumber>1</questionnumber>
-			<prompt>Is ths correct?</prompt>
-			<answer id = "a">No</answer>
-			<answer id = "b">Yes</answer>
-			<answer id = "c">No</answer>
-			<answer id = "d">No</answer>
+			<prompt>Choose the correct possessive form for the phrase/word: Student </prompt>
+			<answer id = "a">Students'</answer>
+			<answer id = "b">Student's</answer>
+			<answer id = "c">Studentes</answer>
+			<answer id = "d">Student</answer>
 			<correctanswer>b</correctanswer>
 		</question>
 		<question type="mc">
 			<questionnumber>2</questionnumber>
-			<prompt>Iss correct?</prompt>
-			<answer id = "a">No</answer>
-			<answer id = "b">No</answer>
-			<answer id = "c">No</answer>
-			<answer id = "d">Yes</answer>
-			<correctanswer>d</correctanswer>
+			<prompt>Choose the correct possessive form for the phrase/word: Students </prompt>
+			<answer id = "a">Students'</answer>
+			<answer id = "b">Student's</answer>
+			<answer id = "c">Studentes</answer>
+			<answer id = "d">Student</answer>
+			<correctanswer>a</correctanswer>
 		</question>
-	</quiz> 
+                <question type="mc">
+			<questionnumber>3</questionnumber>
+			<prompt>Choose the correct possessive form for the phrase/word: Tim and John, who share a dog </prompt>
+			<answer id = "a">Tim and John's</answer>
+			<answer id = "b">Tims' and Johns'</answer>
+			<answer id = "c">Tim's and John's</answer>
+			<answer id = "d">Tim and John</answer>
+			<correctanswer>a</correctanswer>
+		</question>
+                    <question type="mc">
+			<questionnumber>4</questionnumber>
+			<prompt>Choose the correct possessive form for the phrase/word: Tim and John, who each have a their own car  </prompt>
+			<answer id = "a">Tim and John's</answer>
+			<answer id = "b">Tims' and Johns'</answer>
+			<answer id = "c">Tim's and John's</answer>
+			<answer id = "d">Tim and John</answer>
+			<correctanswer>c</correctanswer>
+		</question>
+                <question type="mc">
+			<questionnumber>5</questionnumber>
+			<prompt>What is the general rule for possesive nouns that are plural, such as "dogs"?  </prompt>
+			<answer id = "a">change nothing</answer>
+			<answer id = "b">Just add an apostrophe at the end</answer>
+			<answer id = "c">Add an ''s'</answer>
+			<answer id = "d">Add an 'es </answer>
+			<correctanswer>c</correctanswer>
+		</question>
+                
+    </quiz>
     
     <quiz id="6001">
         <question type="mc" number="1">
 			<questionnumber>1</questionnumber>
-			<prompt>Is ths correct?</prompt>
-			<answer id = "a">No</answer>
-			<answer id = "b">Yes</answer>
-			<answer id = "c">No</answer>
-			<answer id = "d">No</answer>
+			<prompt>Choose the correct pronoun replacement. Timothy is going the store.</prompt>
+			<answer id = "a">His</answer>
+			<answer id = "b">He</answer>
+			<answer id = "c">Him</answer>
+			<answer id = "d">None of the above</answer>
 			<correctanswer>b</correctanswer>
 		</question>
 		<question type="mc">
 			<questionnumber>2</questionnumber>
-			<prompt>Iss correct?</prompt>
-			<answer id = "a">No</answer>
-			<answer id = "b">No</answer>
-			<answer id = "c">No</answer>
-			<answer id = "d">Yes</answer>
-			<correctanswer>d</correctanswer>
+			<prompt>Choose the correct pronoun replacement. John and Tom are both in the robotics club.</prompt>
+			<answer id = "a">They</answer>
+			<answer id = "b">Them</answer>
+			<answer id = "c">His</answer>
+			<answer id = "d">He</answer>
+			<correctanswer>a</correctanswer>
+		</question>
+                <question type="mc">
+			<questionnumber>3</questionnumber>
+			<prompt>Choose the correct pronoun replacement that makes the most grammatical sense. Ashley's hair is long and brown. </prompt>
+			<answer id = "a">Him</answer>
+			<answer id = "b">Her</answer>
+			<answer id = "c">She's</answer>
+			<answer id = "d">Them</answer>
+			<correctanswer>a</correctanswer>
+		</question>
+                <question type="mc">
+			<questionnumber>4</questionnumber>
+			<prompt>Choose the definition of a pronoun in a grammar context. </prompt>
+			<answer id = "a">Connector words</answer>
+			<answer id = "b">Action words</answer>
+			<answer id = "c">Replacements for proper nouns.</answer>
+			<answer id = "d">Subject</answer>
+			<correctanswer>c</correctanswer>
+		</question>
+                <question type="mc">
+			<questionnumber>5</questionnumber>
+			<prompt>Choose the correct pronoun replacement that makes the most grammatical sense. Sarah and I love to shop. </prompt>
+			<answer id = "a">Him</answer>
+			<answer id = "b">Her</answer>
+			<answer id = "c">We</answer>
+			<answer id = "d">I</answer>
+			<correctanswer>c</correctanswer>
 		</question>
     </quiz>
 </quizzes>
+
