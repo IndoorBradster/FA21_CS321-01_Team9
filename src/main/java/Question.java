@@ -8,11 +8,12 @@
  * @author adrianalanier
  */
 public class Question {
-    private int QuestionNumber;
+    private String QuestionNumber;
     private String QuestionPrompt;
     private String OptionA;
     private String OptionB;
     private String OptionC;
+    private String OptionD;
     private String CorrectAnswer;
  
     
@@ -26,7 +27,7 @@ public class Question {
  * @param num int to assign to set the question number.
  *  
 */
-    public void setQuestionNumber(int num) {
+    public void setQuestionNumber(String num) {
         this.QuestionNumber = num;
     }
 
@@ -34,7 +35,7 @@ public class Question {
  * @param prompt 
  *  
 */
-    public void seQuestionPrompt(String Prompt) {
+    public void setQuestionPrompt(String Prompt) {
         this.QuestionPrompt = Prompt;
     }
 /** Set the correct answer
@@ -69,12 +70,20 @@ public class Question {
         this.OptionC = optionC;
     }
     
+    /** Set D  for the multiple choice options
+ * @param optionD
+ *  
+*/ 
+    public void setOptionD(String optionD) {
+        this.OptionD = optionD;
+    }
+    
     
 /** Get question number
  * @return QuestionNumber
  *  
 */ 
-    public int getQuestionNumber() {
+    public String getQuestionNumber() {
         return QuestionNumber;
     }
     

@@ -21,6 +21,7 @@ public class EducatorUI extends javax.swing.JFrame {
 
     private JPanel currentPage;
     private LessonList lessonlist = new LessonList();
+    private QuizList quizzes = new QuizList();
     private Lesson currentLesson = new Lesson();
     private UserList UserList = new UserList();
     
@@ -62,7 +63,8 @@ public class EducatorUI extends javax.swing.JFrame {
         catch (IOException | ParserConfigurationException | DOMException | SAXException e) {
             //exception handling done here
         }
-        
+
+        // Import Quizzes
         try {
             File fXmlFile = new File("quizzes.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -75,14 +77,28 @@ public class EducatorUI extends javax.swing.JFrame {
                 Node nNode = nodeList.item(ind);
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element tempElement = (Element) nNode;
-                    Question tempQuestion = new Question();
-                    tempQuestion.setQuestion(tempElement.getAttribute("mc"));
-                    tempQuestion.setLessonTitle(tempElement.getElementsByTagName("title").item(0).getTextContent());
-                    tempQuestion.setLessonContent(tempElement.getElementsByTagName("content").item(0).getTextContent());
-                    lessonlist.addLesson(tempLesson);
+                    quiz tempQuiz = new quiz();
+                    tempQuiz.setQuizID(tempElement.getAttribute("id"));
+                    
+                    NodeList questionlist = tempElement.getElementsByTagName("question");
+                    for (int j = 0; j < questionlist.getLength(); j++) {
+                        Node questionNode = questionlist.item(j);
+                        if (questionNode.getNodeType() == Node.ELEMENT_NODE) {
+                            Element tempSubElement = (Element) questionNode;
+                            Question tempQuestion = new Question();
+                            tempQuestion.setQuestionPrompt(tempSubElement.getElementsByTagName("prompt").item(0).getTextContent());
+                            tempQuestion.setQuestionNumber(tempSubElement.getElementsByTagName("questionnumber").item(0).getTextContent());
+                            tempQuestion.setOptionA(tempSubElement.getElementsByTagName("answer").item(0).getTextContent());
+                            tempQuestion.setOptionB(tempSubElement.getElementsByTagName("answer").item(1).getTextContent());
+                            tempQuestion.setOptionC(tempSubElement.getElementsByTagName("answer").item(2).getTextContent());
+                            tempQuestion.setOptionD(tempSubElement.getElementsByTagName("answer").item(2).getTextContent());
+                            tempQuestion.setCorrectAnswer(tempSubElement.getElementsByTagName("correctanswer").item(0).getTextContent());
+                            tempQuiz.addQuestion(tempQuestion);
+                        }     
+                    }
+                    quizzes.addQuiz(tempQuiz.getQuizID(), tempQuiz);
                 }
             }
-            
         } 
         catch (IOException | ParserConfigurationException | DOMException | SAXException e) {
             //exception handling done here

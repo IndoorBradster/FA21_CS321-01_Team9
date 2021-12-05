@@ -3,11 +3,11 @@
     <quiz id="1001">
         <question type="mc">
 			<questionnumber>1</questionnumber>
-			<prompt>Is this correct?</prompt>
-			<answer id = "a">No</answer>
-			<answer id = "b">No</answer>
-			<answer id = "c">Yes</answer>
-			<answer id = "d">No</answer>
+			<prompt>What's the color of the sky?</prompt>
+			<answer id = "a">Green</answer>
+			<answer id = "b">Yellow</answer>
+			<answer id = "c">Blue</answer>
+			<answer id = "d">Red</answer>
 			<correctanswer>c</correctanswer>
 		</question>
 		<question type="mc">
@@ -24,7 +24,7 @@
 	<quiz id="2001">
         <question type="mc" number="1">
 			<questionnumber>1</questionnumber>
-			<prompt>Is this correct?</prompt>
+			<prompt>Is ths correct?</prompt>
 			<answer id = "a">No</answer>
 			<answer id = "b">Yes</answer>
 			<answer id = "c">No</answer>
@@ -33,7 +33,7 @@
 		</question>
 		<question type="mc">
 			<questionnumber>2</questionnumber>
-			<prompt>Is this correct?</prompt>
+			<prompt>Iss correct?</prompt>
 			<answer id = "a">No</answer>
 			<answer id = "b">No</answer>
 			<answer id = "c">No</answer>
