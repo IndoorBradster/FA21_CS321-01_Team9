@@ -1,7 +1,10 @@
+import java.awt.Component;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import javax.swing.JPanel;
+import java.util.Iterator;
+import javax.lang.model.SourceVersion;
+import javax.swing.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -11,6 +14,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+import java.awt.*;
 
 public class EducatorUI extends javax.swing.JFrame {
 
@@ -28,6 +32,7 @@ public class EducatorUI extends javax.swing.JFrame {
     
     // Code that needs to run when initialized
     private void onInitialize() {
+        // First page should always be login page
         currentPage = LoginPage;
         
         // Import data from lesson file and updates a lessonlist object
@@ -114,8 +119,6 @@ public class EducatorUI extends javax.swing.JFrame {
         LessonsText = new javax.swing.JLabel();
         LessonListScrollPanel = new javax.swing.JScrollPane();
         LessonListPanel = new javax.swing.JPanel();
-        Lesson1Button = new javax.swing.JButton();
-        Lesson2Button = new javax.swing.JButton();
         LessonPage = new javax.swing.JPanel();
         LessonTitle = new javax.swing.JLabel();
         LessonScrollPanel = new javax.swing.JScrollPane();
@@ -308,39 +311,15 @@ public class EducatorUI extends javax.swing.JFrame {
         LessonsText.setText("Lessons");
         LessonsText.setToolTipText("");
 
-        Lesson1Button.setText("Lesson 1: Title");
-        Lesson1Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Lesson1ButtonActionPerformed(evt);
-            }
-        });
-
-        Lesson2Button.setText("Lesson 2: Title");
-        Lesson2Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Lesson2ButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout LessonListPanelLayout = new javax.swing.GroupLayout(LessonListPanel);
         LessonListPanel.setLayout(LessonListPanelLayout);
         LessonListPanelLayout.setHorizontalGroup(
             LessonListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LessonListPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(LessonListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Lesson2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Lesson1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(426, Short.MAX_VALUE))
+            .addGap(0, 600, Short.MAX_VALUE)
         );
         LessonListPanelLayout.setVerticalGroup(
             LessonListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LessonListPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Lesson1Button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Lesson2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(332, Short.MAX_VALUE))
+            .addGap(0, 404, Short.MAX_VALUE)
         );
 
         LessonListScrollPanel.setViewportView(LessonListPanel);
@@ -487,12 +466,12 @@ public class EducatorUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        Question2Label.setText("Question 1:");
+        Question2Label.setText("Question 2:");
 
         Question2TextArea.setColumns(5);
         Question2TextArea.setLineWrap(true);
         Question2TextArea.setRows(5);
-        Question2TextArea.setText("This is question 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus, est eget efficitur dignissim, neque ligula tristique mauris, vel vestibulum purus nulla ac ante.");
+        Question2TextArea.setText("This is question 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus, est eget efficitur dignissim, neque ligula tristique mauris, vel vestibulum purus nulla ac ante.");
         Question2TextArea.setWrapStyleWord(true);
         Question2ScrollPanel.setViewportView(Question2TextArea);
 
@@ -545,12 +524,12 @@ public class EducatorUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        Question3Label.setText("Question 1:");
+        Question3Label.setText("Question 3:");
 
         Question3TextArea.setColumns(5);
         Question3TextArea.setLineWrap(true);
         Question3TextArea.setRows(5);
-        Question3TextArea.setText("This is question 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus, est eget efficitur dignissim, neque ligula tristique mauris, vel vestibulum purus nulla ac ante.");
+        Question3TextArea.setText("This is question 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus, est eget efficitur dignissim, neque ligula tristique mauris, vel vestibulum purus nulla ac ante.");
         Question3TextArea.setWrapStyleWord(true);
         Question3ScrollPanel.setViewportView(Question3TextArea);
 
@@ -870,7 +849,7 @@ public class EducatorUI extends javax.swing.JFrame {
 
     private void LessonsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LessonsButtonActionPerformed
         swapPanel(LessonSelectPage);
-        
+        LessonPageInit(lessonlist);
     }//GEN-LAST:event_LessonsButtonActionPerformed
 
     private void ScoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScoresButtonActionPerformed
@@ -884,8 +863,8 @@ public class EducatorUI extends javax.swing.JFrame {
 
     private void QuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuizButtonActionPerformed
         swapPanel(QuizPage);
-         LogOutButton.setEnabled(false);
-         HomeButton.setEnabled(false);
+        LogOutButton.setEnabled(false);
+        HomeButton.setEnabled(false);
     }//GEN-LAST:event_QuizButtonActionPerformed
 
     private void SubmitQuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitQuizButtonActionPerformed
@@ -895,14 +874,6 @@ public class EducatorUI extends javax.swing.JFrame {
     private void Question1Option3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question1Option3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Question1Option3ActionPerformed
-
-    private void Lesson2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Lesson2ButtonActionPerformed
-        swapPanel(LessonPage);
-    }//GEN-LAST:event_Lesson2ButtonActionPerformed
-
-    private void Lesson1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Lesson1ButtonActionPerformed
-        swapPanel(LessonPage);
-    }//GEN-LAST:event_Lesson1ButtonActionPerformed
 
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -916,11 +887,9 @@ public class EducatorUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane GradeBookScrollPanel;
     private javax.swing.JButton HomeButton;
     private javax.swing.JPanel HomePage;
-    private javax.swing.JButton Lesson1Button;
     private javax.swing.JLabel Lesson1GradeBookScore;
     private javax.swing.JLabel Lesson1GradeBookTitle;
     private javax.swing.JPanel Lesson1GradePanel;
-    private javax.swing.JButton Lesson2Button;
     private javax.swing.JLabel Lesson2GradeBookScore;
     private javax.swing.JLabel Lesson2GradeBookTitle;
     private javax.swing.JPanel Lesson2GradePanel;
@@ -1003,5 +972,21 @@ public class EducatorUI extends javax.swing.JFrame {
         if(currentPage == HomePage) {
             HomeButton.setEnabled(false);
         }
+    }
+
+    private void LessonPageInit(LessonList lessonlist) {
+
+        Lesson Lesson = new Lesson();
+        int dimy = 0;
+        for (Iterator<Lesson> it = lessonlist.getLessons().iterator(); it.hasNext();) {
+            Lesson = it.next();
+            JButton button = new JButton();
+            button.setText(Lesson.getLessonTitle());
+            button.setBounds(12,12+dimy,LessonListPanel.getWidth()-24,50);  
+            LessonListPanel.add(button);
+            button.setVisible(true);
+            dimy+=50;
+        }
+        LessonListPanel.setVisible(true);
     }
 }

@@ -37,7 +37,6 @@ public class LessonList {
  * 
  * @return Titles 
 */
-    
     public List<String> getLessonTitles() {
         
         List<String> Titles = null;
@@ -51,5 +50,13 @@ public class LessonList {
             System.out.println("Exception thrown : " + e);
         }
         return Titles;
+    }
+
+    public int getLength() {
+        return LessonList.size();
+    }
+    
+    public List<Lesson> getLessons() {
+        return LessonList;
     }
 }
