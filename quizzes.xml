@@ -3,25 +3,82 @@
     <quiz id="1001">
         <question type="mc">
 			<questionnumber>1</questionnumber>
-			<prompt>What's the color of the sky?</prompt>
-			<answer>Green</answer>
-			<answer>Yellow</answer>
-			<answer>Blue</answer>
-			<answer>Red</answer>
-			<correctanswer>c</correctanswer>
+			<prompt>For the following statement, what is the subject? The dog likes to play fetch outside.</prompt>
+			<answer id = "a">fetch</answer>
+			<answer id = "b">likes</answer>
+			<answer id = "c">the dog</answer>
+			<answer id = "a">outside</answer>
+			<correctanswer>d</correctanswer>
 		</question>
 		<question type="mc">
 			<questionnumber>2</questionnumber>
-			<prompt>Is this correct?</prompt>
-			<answer id = "a">Yes</answer>
-			<answer id = "b">No</answer>
-			<answer id = "c">No</answer>
-			<answer id = "d">No</answer>
-			<correctanswer>a</correctanswer>
+			<prompt>For the following statement, what is "sings in the choir"? My sister sings in the choir. </prompt>
+			<answer id = "a">preposistion</answer>
+			<answer id = "b">subject</answer>
+			<answer id = "c">predicate</answer>
+			<answer id = "a">none of the above</answer>
+			<correctanswer>c</correctanswer>
+		</question>
+                <question type="mc">
+			<questionnumber>3</questionnumber>
+			<prompt>For the following statement, what is the predicate? On Tuesday, I will be leaving for a roadtrip. </prompt>
+			<answer id = "a">leaving for a roadtrip</answer>
+			<answer id = "b">Tuesday</answer>
+			<answer id = "c">I</answer>
+			<answer id = "a">will be</answer>
+			<correctanswer>b</correctanswer>
+		</question>
+                    <question type="mc">
+			<questionnumber>4</questionnumber>
+			<prompt>For the following statement, what part of speech is "they"? They are going to the mall.</prompt>
+			<answer id = "a">preposistion</answer>
+			<answer id = "b">adverb</answer>
+			<answer id = "c">noun</answer>
+			<answer id = "a">pronoun</answer>
+			<correctanswer>b</correctanswer>
+		</question>
+                 <question type="mc">
+			<questionnumber>5</questionnumber>
+			<prompt>Which of the following is not a part of speech?</prompt>
+			<answer id = "a">predicate</answer>
+			<answer id = "b">conjunctions</answer>
+			<answer id = "c">articles</answer>
+			<answer id = "a">adjectivess</answer>
+			<correctanswer>b</correctanswer>
 		</question>
     </quiz>
 
 	<quiz id="2001">
+        <question type="mc" number="1">
+					<questionnumber>1</questionnumber>
+			<prompt>For the following statement, what part of speech is "dog"? The dog likes to play fetch outside.</prompt>
+			<answer id = "a">preposistion</answer>
+			<answer id = "b">adverb</answer>
+			<answer id = "c">noun</answer>
+			<answer id = "a">pronoun</answer>
+			<correctanswer>c</correctanswer>
+		</question>
+		<question type="mc">
+			<questionnumber>2</questionnumber>
+			<prompt>For the following statement, what part of speech is "under"? My cat likes to hide under the bed. </prompt>
+			<answer id = "a">preposistion</answer>
+			<answer id = "b">adverb</answer>
+			<answer id = "c">noun</answer>
+			<answer id = "a">pronoun</answer>
+			<correctanswer>a</correctanswer>
+		</question>
+                <question type="mc">
+			<questionnumber>3</questionnumber>
+			<prompt>For the following statement, what part of speech is "quitely"? I tiptoed out of the room so I would not disturb anyone.</prompt>
+			<answer id = "a">preposistion</answer>
+			<answer id = "b">adverb</answer>
+			<answer id = "c">noun</answer>
+			<answer id = "a">pronoun</answer>
+			<correctanswer>b</correctanswer>
+		</question>
+
+    </quiz>
+    <quiz id="3001">
         <question type="mc" number="1">
 			<questionnumber>1</questionnumber>
 			<prompt>Is ths correct?</prompt>
@@ -41,8 +98,77 @@
 			<correctanswer>d</correctanswer>
 		</question>
     </quiz>
-	
-	<quiz id="3001">
+    <quiz id="4001">
+        <question type="mc" number="1">
+			<questionnumber>1</questionnumber>
+			<prompt>Shruti ______ to study now.</prompt>
+			<answer id = "a">going</answer>
+			<answer id = "b">is going</answer>
+			<answer id = "c">will</answer>
+			<answer id = "d">None of the above</answer>
+			<correctanswer>a</correctanswer>
+		</question>
+		<question type="mc">
+			<questionnumber>2</questionnumber>
+			<prompt>James ____ to the market yesterday.</prompt>
+			<answer id = "a">went</answer>
+			<answer id = "b">is left</answer>
+			<answer id = "c">is going</answer>
+			<answer id = "d">go</answer>
+			<correctanswer>a</correctanswer>
+		</question>
+        <question type="mc">
+			<questionnumber>3</questionnumber>
+			<prompt>At this time tomorrow, Jason _____ in Paris.</prompt>
+			<answer id = "a">will be</answer>
+			<answer id = "b">was</answer>
+			<answer id = "c">were</answer>
+			<answer id = "d">was be</answer>
+			<correctanswer>a</correctanswer>
+		</question>
+         <question type="mc">
+			<questionnumber>4</questionnumber>
+			<prompt>When Diya got the call, she _____ in her office.</prompt>
+			<answer id = "a">No</answer>
+			<answer id = "b">No</answer>
+			<answer id = "c">Yes</answer>
+			<answer id = "d">No</answer>
+			<correctanswer>c</correctanswer>
+		</question>
+         <question type="mc">
+			<questionnumber>5</questionnumber>
+			<prompt> If you had arrived late, I _____ angry.</prompt>
+			<answer id = "a">No</answer>
+			<answer id = "b">Yes</answer>
+			<answer id = "c">No</answer>
+			<answer id = "d">No</answer>
+			<correctanswer>c</correctanswer>
+		</question>
+    </quiz>
+    
+    
+    <quiz id="5001">
+        <question type="mc" number="1">
+			<questionnumber>1</questionnumber>
+			<prompt>Is ths correct?</prompt>
+			<answer id = "a">No</answer>
+			<answer id = "b">Yes</answer>
+			<answer id = "c">No</answer>
+			<answer id = "d">No</answer>
+			<correctanswer>b</correctanswer>
+		</question>
+		<question type="mc">
+			<questionnumber>2</questionnumber>
+			<prompt>Iss correct?</prompt>
+			<answer id = "a">No</answer>
+			<answer id = "b">No</answer>
+			<answer id = "c">No</answer>
+			<answer id = "d">Yes</answer>
+			<correctanswer>d</correctanswer>
+		</question>
+	</quiz> 
+    
+    <quiz id="6001">
         <question type="mc" number="1">
 			<questionnumber>1</questionnumber>
 			<prompt>Is ths correct?</prompt>
