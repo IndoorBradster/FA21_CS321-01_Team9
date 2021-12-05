@@ -28,7 +28,9 @@ public class Grade {
     public void updateGrade(int Grade) {
         QuizGrade = Grade;
     }
-    
+   /** Gets the ID for the lesson that the grade is associated with
+   * @return LessonID 
+   **/
     public String GetLessonID() {
         return LessonID;
     }
