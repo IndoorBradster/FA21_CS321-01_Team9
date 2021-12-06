@@ -30,7 +30,7 @@
 					  <archive>
 						<manifest>
 
-						  <mainClass>Shooler</mainClass>
+						  <mainClass>Main</mainClass>
 
 						</manifest>
 					  </archive>
