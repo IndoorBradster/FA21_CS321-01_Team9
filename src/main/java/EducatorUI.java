@@ -12,7 +12,10 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import java.awt.event.ActionEvent;
-
+/**
+ *
+ * @author Bradley Stewart
+ */
 public class EducatorUI extends javax.swing.JFrame {
 
     private JPanel currentPage;

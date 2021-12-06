@@ -1,5 +1,7 @@
 import java.util.*;
 
+/** Class for the gradebook object attached to a user.
+**/
 public class GradeBook {
 
     private final HashMap<String, Grade> GradeBook = new HashMap<>();

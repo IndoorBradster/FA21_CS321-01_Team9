@@ -9,35 +9,6 @@ import java.util.*;
  *
  * @author adrianalanier
  */
-/*public class UserAccount {
-    private String UserName;
-    private String PasswordHash;
-    private String firstName;
-    private String lastName;
-    
-    public void UserAccount(String User, String Password)
-    {
-       this.UserName = User;
-       this.PasswordHash = Password;
-    }
-    
-    public void setName(String first, String last)
-    {
-        this.firstName=first;
-        this.lastName=last;
-    }
-    
-    public String getName()
-    {
-       return this.firstName + " " + this.lastName;
-    }
-  
-    
-    
-}
-*/
-
-
 /**
 * Holds functions for username and password control
 */
