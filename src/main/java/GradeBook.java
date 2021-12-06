@@ -1,6 +1,6 @@
 import java.util.*;
 
-/** Class for the gradebook object attached to a user.
+/** Class for the GradeBook object attached to a user.
 **/
 public class GradeBook {
 

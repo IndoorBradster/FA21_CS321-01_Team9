@@ -20,7 +20,7 @@ public class accountcontrol {
 
 
 /**
-* Contructor, defaults username and password to generic string
+* Constructor, defaults username and password to generic string
 */
    public accountcontrol(){
        //this.username = "anyusername";

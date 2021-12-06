@@ -28,7 +28,6 @@ public class UserList extends HashMap<String, accountcontrol> {
     *@param username 
     *@param password 
     *@return account
-    *@return null 
     */ 
     public accountcontrol getUser(String username, String password) {
         accountcontrol account = this.get(username);
