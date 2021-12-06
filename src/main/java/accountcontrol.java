@@ -71,15 +71,23 @@ public class accountcontrol {
    public void setPassword(String Password) {
        password = Password;
    }
-   
+/**assigns a grade to a lesson quiz
+*@param LessonID 
+*@param grade 
+*/    
    public void addGrade(String LessonID, Grade grade) {
        this.Grades.addScore(LessonID, grade);
    }
-   
+/**gets the grade from a lesson quiz 
+*@param LessonID 
+*@return Grades.getGrade(LessonID)
+*/   
    public int getGrade (String LessonID) {
        return Grades.getGrade(LessonID);
    }
-   
+/**gets the ID for a gradebook 
+* @return Grades.getGradeBookID 
+*/   
    public Set<String> getGradeBookIDs() {
        return Grades.getGradeBookIDs();
    }

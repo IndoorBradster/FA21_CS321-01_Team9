@@ -5,11 +5,6 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
@@ -25,13 +20,20 @@ public class QuizQuestionPanel extends JPanel {
     JRadioButton answerd = new JRadioButton();
     public JTextArea QuestionPromptText = new JTextArea();
     
+ /**Constructor
+ *
+ */
     public void QuizQuestionPanel() {
     }
-    
+ /**question getter
+ *@return question
+ */ 
     public Question getQuestion() {
         return question;
     }
-    
+ /**quiz getter
+ *@return quiz
+ */  
     public quiz getQuiz() {
         return quiz;
     }
@@ -40,6 +42,10 @@ public class QuizQuestionPanel extends JPanel {
         QuestionPromptText.setText(text);
     }
     
+ /**quiz sets the answer choices for each of the questions to a radio button
+ *@param q
+ *@param Quiz
+ */ 
     public void initQuestionPanel(Question q, quiz Quiz) {
         
             
