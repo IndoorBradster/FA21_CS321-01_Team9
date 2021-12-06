@@ -139,34 +139,6 @@ public class EducatorUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ButtonGroup_QuizQuestion1 = new javax.swing.ButtonGroup();
-        ButtonGroup_QuizQuestion2 = new javax.swing.ButtonGroup();
-        ButtonGroup_QuizQuestion3 = new javax.swing.ButtonGroup();
-        QuizContentPanelOld = new javax.swing.JPanel();
-        Question1Panel = new javax.swing.JPanel();
-        Question1Label = new javax.swing.JLabel();
-        Question1ScrollPanel = new javax.swing.JScrollPane();
-        Question1TextArea = new javax.swing.JTextArea();
-        Question1Option1 = new javax.swing.JRadioButton();
-        Question1Option2 = new javax.swing.JRadioButton();
-        Question1Option4 = new javax.swing.JRadioButton();
-        Question1Option3 = new javax.swing.JRadioButton();
-        Question2Panel = new javax.swing.JPanel();
-        Question2Label = new javax.swing.JLabel();
-        Question2ScrollPanel = new javax.swing.JScrollPane();
-        Question2TextArea = new javax.swing.JTextArea();
-        Question2Option1 = new javax.swing.JRadioButton();
-        Question2Option2 = new javax.swing.JRadioButton();
-        Question2Option3 = new javax.swing.JRadioButton();
-        Question2Option4 = new javax.swing.JRadioButton();
-        Question3Panel = new javax.swing.JPanel();
-        Question3Label = new javax.swing.JLabel();
-        Question3ScrollPanel = new javax.swing.JScrollPane();
-        Question3TextArea = new javax.swing.JTextArea();
-        Question3Option1 = new javax.swing.JRadioButton();
-        Question3Option2 = new javax.swing.JRadioButton();
-        Question3Option3 = new javax.swing.JRadioButton();
-        Question3Option4 = new javax.swing.JRadioButton();
         HomeButton = new javax.swing.JButton();
         LogOutButton = new javax.swing.JButton();
         ContentPanel = new javax.swing.JPanel();
@@ -201,209 +173,6 @@ public class EducatorUI extends javax.swing.JFrame {
         GradeBookLabel = new javax.swing.JLabel();
         GradeBookScrollPanel = new javax.swing.JScrollPane();
         GradeBookPanel = new javax.swing.JPanel();
-
-        Question1Label.setText("Question 1:");
-
-        Question1TextArea.setColumns(5);
-        Question1TextArea.setLineWrap(true);
-        Question1TextArea.setRows(5);
-        Question1TextArea.setText("This is question 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus, est eget efficitur dignissim, neque ligula tristique mauris, vel vestibulum purus nulla ac ante.");
-        Question1TextArea.setWrapStyleWord(true);
-        Question1ScrollPanel.setViewportView(Question1TextArea);
-
-        ButtonGroup_QuizQuestion1.add(Question1Option1);
-        Question1Option1.setText("Answer A");
-
-        ButtonGroup_QuizQuestion1.add(Question1Option2);
-        Question1Option2.setText("Answer B");
-
-        ButtonGroup_QuizQuestion1.add(Question1Option4);
-        Question1Option4.setText("Answer D");
-
-        ButtonGroup_QuizQuestion1.add(Question1Option3);
-        Question1Option3.setText("Answer C");
-        Question1Option3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Question1Option3ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout Question1PanelLayout = new javax.swing.GroupLayout(Question1Panel);
-        Question1Panel.setLayout(Question1PanelLayout);
-        Question1PanelLayout.setHorizontalGroup(
-            Question1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Question1PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Question1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Question1ScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Question1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(Question1PanelLayout.createSequentialGroup()
-                        .addGroup(Question1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Question1Option2)
-                            .addComponent(Question1Option1))
-                        .addGap(18, 18, 18)
-                        .addGroup(Question1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Question1Option4)
-                            .addComponent(Question1Option3))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        Question1PanelLayout.setVerticalGroup(
-            Question1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Question1PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Question1Label)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Question1ScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9)
-                .addGroup(Question1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Question1Option1)
-                    .addComponent(Question1Option3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(Question1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Question1Option4)
-                    .addComponent(Question1Option2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        Question2Label.setText("Question 2:");
-
-        Question2TextArea.setColumns(5);
-        Question2TextArea.setLineWrap(true);
-        Question2TextArea.setRows(5);
-        Question2TextArea.setText("This is question 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus, est eget efficitur dignissim, neque ligula tristique mauris, vel vestibulum purus nulla ac ante.");
-        Question2TextArea.setWrapStyleWord(true);
-        Question2ScrollPanel.setViewportView(Question2TextArea);
-
-        ButtonGroup_QuizQuestion2.add(Question2Option1);
-        Question2Option1.setText("Answer A");
-
-        ButtonGroup_QuizQuestion2.add(Question2Option2);
-        Question2Option2.setText("Answer B");
-
-        ButtonGroup_QuizQuestion2.add(Question2Option3);
-        Question2Option3.setText("Answer D");
-
-        ButtonGroup_QuizQuestion2.add(Question2Option4);
-        Question2Option4.setText("Answer C");
-
-        javax.swing.GroupLayout Question2PanelLayout = new javax.swing.GroupLayout(Question2Panel);
-        Question2Panel.setLayout(Question2PanelLayout);
-        Question2PanelLayout.setHorizontalGroup(
-            Question2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Question2PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Question2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Question2ScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Question2Label, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(Question2PanelLayout.createSequentialGroup()
-                        .addGroup(Question2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Question2Option2)
-                            .addComponent(Question2Option1))
-                        .addGap(18, 18, 18)
-                        .addGroup(Question2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Question2Option3)
-                            .addComponent(Question2Option4))))
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
-        Question2PanelLayout.setVerticalGroup(
-            Question2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Question2PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Question2Label)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Question2ScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9)
-                .addGroup(Question2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Question2Option1)
-                    .addComponent(Question2Option4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(Question2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Question2Option3)
-                    .addComponent(Question2Option2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        Question3Label.setText("Question 3:");
-
-        Question3TextArea.setColumns(5);
-        Question3TextArea.setLineWrap(true);
-        Question3TextArea.setRows(5);
-        Question3TextArea.setText("This is question 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus, est eget efficitur dignissim, neque ligula tristique mauris, vel vestibulum purus nulla ac ante.");
-        Question3TextArea.setWrapStyleWord(true);
-        Question3ScrollPanel.setViewportView(Question3TextArea);
-
-        ButtonGroup_QuizQuestion3.add(Question3Option1);
-        Question3Option1.setText("Answer A");
-
-        ButtonGroup_QuizQuestion3.add(Question3Option2);
-        Question3Option2.setText("Answer B");
-
-        ButtonGroup_QuizQuestion3.add(Question3Option3);
-        Question3Option3.setText("Answer D");
-
-        ButtonGroup_QuizQuestion3.add(Question3Option4);
-        Question3Option4.setText("Answer C");
-
-        javax.swing.GroupLayout Question3PanelLayout = new javax.swing.GroupLayout(Question3Panel);
-        Question3Panel.setLayout(Question3PanelLayout);
-        Question3PanelLayout.setHorizontalGroup(
-            Question3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Question3PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Question3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Question3ScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Question3Label, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(Question3PanelLayout.createSequentialGroup()
-                        .addGroup(Question3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Question3Option2)
-                            .addComponent(Question3Option1))
-                        .addGap(18, 18, 18)
-                        .addGroup(Question3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Question3Option3)
-                            .addComponent(Question3Option4))))
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
-        Question3PanelLayout.setVerticalGroup(
-            Question3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Question3PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Question3Label)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Question3ScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9)
-                .addGroup(Question3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Question3Option1)
-                    .addComponent(Question3Option4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(Question3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Question3Option3)
-                    .addComponent(Question3Option2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout QuizContentPanelOldLayout = new javax.swing.GroupLayout(QuizContentPanelOld);
-        QuizContentPanelOld.setLayout(QuizContentPanelOldLayout);
-        QuizContentPanelOldLayout.setHorizontalGroup(
-            QuizContentPanelOldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(QuizContentPanelOldLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(QuizContentPanelOldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Question1Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Question2Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Question3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        QuizContentPanelOldLayout.setVerticalGroup(
-            QuizContentPanelOldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(QuizContentPanelOldLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Question1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Question2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Question3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(10, 10));
@@ -779,6 +548,7 @@ public class EducatorUI extends javax.swing.JFrame {
     
     private void LogOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutButtonActionPerformed
         currentUser = null;
+        LoginError.setVisible(false);
         swapPanel(LoginPage);
     }//GEN-LAST:event_LogOutButtonActionPerformed
 
@@ -801,6 +571,8 @@ public class EducatorUI extends javax.swing.JFrame {
             if (currentUser.getPassword().equals(String.valueOf(PasswordField.getPassword()))) {
                swapPanel(HomePage);
                 LogOutButton.setEnabled(true);
+                UsernameField.setText("");
+                PasswordField.setText("");
             }
             else {
                 LoginError.setVisible(true);
@@ -830,10 +602,6 @@ public class EducatorUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_SubmitQuizButtonActionPerformed
 
-    private void Question1Option3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Question1Option3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Question1Option3ActionPerformed
-
     private void UsernameFieldInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_UsernameFieldInputMethodTextChanged
         
         String Username = (String) evt.getText().toString();
@@ -851,9 +619,6 @@ public class EducatorUI extends javax.swing.JFrame {
     }
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup ButtonGroup_QuizQuestion1;
-    private javax.swing.ButtonGroup ButtonGroup_QuizQuestion2;
-    private javax.swing.ButtonGroup ButtonGroup_QuizQuestion3;
     private javax.swing.JPanel ContentPanel;
     private javax.swing.JLabel GradeBookLabel;
     private javax.swing.JPanel GradeBookPage;
@@ -877,33 +642,8 @@ public class EducatorUI extends javax.swing.JFrame {
     private javax.swing.JLabel LoginPromptText;
     private javax.swing.JPasswordField PasswordField;
     private javax.swing.JLabel PasswordLabel;
-    private javax.swing.JLabel Question1Label;
-    private javax.swing.JRadioButton Question1Option1;
-    private javax.swing.JRadioButton Question1Option2;
-    private javax.swing.JRadioButton Question1Option3;
-    private javax.swing.JRadioButton Question1Option4;
-    private javax.swing.JPanel Question1Panel;
-    private javax.swing.JScrollPane Question1ScrollPanel;
-    private javax.swing.JTextArea Question1TextArea;
-    private javax.swing.JLabel Question2Label;
-    private javax.swing.JRadioButton Question2Option1;
-    private javax.swing.JRadioButton Question2Option2;
-    private javax.swing.JRadioButton Question2Option3;
-    private javax.swing.JRadioButton Question2Option4;
-    private javax.swing.JPanel Question2Panel;
-    private javax.swing.JScrollPane Question2ScrollPanel;
-    private javax.swing.JTextArea Question2TextArea;
-    private javax.swing.JLabel Question3Label;
-    private javax.swing.JRadioButton Question3Option1;
-    private javax.swing.JRadioButton Question3Option2;
-    private javax.swing.JRadioButton Question3Option3;
-    private javax.swing.JRadioButton Question3Option4;
-    private javax.swing.JPanel Question3Panel;
-    private javax.swing.JScrollPane Question3ScrollPanel;
-    private javax.swing.JTextArea Question3TextArea;
     private javax.swing.JButton QuizButton;
     private javax.swing.JPanel QuizContentPanel;
-    private javax.swing.JPanel QuizContentPanelOld;
     private javax.swing.JPanel QuizPage;
     private javax.swing.JScrollPane QuizScrollPanel;
     private javax.swing.JLabel QuizTitle;
