@@ -1,11 +1,6 @@
-import static UserSerializer.writeObjectToFile;
-import java.awt.Component;
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
-import javax.lang.model.SourceVersion;
 import javax.swing.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -16,10 +11,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.util.Arrays;
-import java.util.Set;
 
 public class EducatorUI extends javax.swing.JFrame {
 
@@ -29,8 +21,6 @@ public class EducatorUI extends javax.swing.JFrame {
     private Lesson currentLesson = new Lesson();
     private UserList UserList = new UserList();
     private accountcontrol currentUser = new accountcontrol();
-    private String currentUsername;
-    private String temppassword;
     
     /**
      * Creates new form ContactEditorUI
@@ -440,6 +430,8 @@ public class EducatorUI extends javax.swing.JFrame {
         LoginPromptText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoginPromptText.setText("Please Login");
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         UsernameField.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
             }
@@ -479,32 +471,32 @@ public class EducatorUI extends javax.swing.JFrame {
                     .addComponent(UsernameLabel)
                     .addComponent(PasswordLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LoginButton)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(PasswordField)
-                        .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(UsernameField, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                    .addComponent(PasswordField))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(LoginError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(LoginButton)
+                .addGap(134, 134, 134))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(UsernameLabel)
-                        .addGap(14, 14, 14)
-                        .addComponent(PasswordLabel))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(UsernameLabel)
+                    .addComponent(UsernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PasswordLabel)
+                    .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LoginButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LoginError)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
         );
 
         javax.swing.GroupLayout LoginPageLayout = new javax.swing.GroupLayout(LoginPage);
@@ -512,11 +504,11 @@ public class EducatorUI extends javax.swing.JFrame {
         LoginPageLayout.setHorizontalGroup(
             LoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LoginPageLayout.createSequentialGroup()
-                .addGap(150, 150, 150)
+                .addContainerGap(148, Short.MAX_VALUE)
                 .addGroup(LoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LoginPromptText, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(172, 172, 172))
+                    .addComponent(LoginPromptText, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
         LoginPageLayout.setVerticalGroup(
             LoginPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -525,7 +517,7 @@ public class EducatorUI extends javax.swing.JFrame {
                 .addComponent(LoginPromptText)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(294, Short.MAX_VALUE))
+                .addContainerGap(290, Short.MAX_VALUE))
         );
 
         ContentPanel.add(LoginPage, "card2");
@@ -676,7 +668,7 @@ public class EducatorUI extends javax.swing.JFrame {
         );
         QuizContentPanelLayout.setVerticalGroup(
             QuizContentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 349, Short.MAX_VALUE)
+            .addGap(0, 525, Short.MAX_VALUE)
         );
 
         QuizScrollPanel.setViewportView(QuizContentPanel);
@@ -725,7 +717,7 @@ public class EducatorUI extends javax.swing.JFrame {
         );
         GradeBookPanelLayout.setVerticalGroup(
             GradeBookPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
+            .addGap(0, 453, Short.MAX_VALUE)
         );
 
         GradeBookScrollPanel.setViewportView(GradeBookPanel);
@@ -736,7 +728,7 @@ public class EducatorUI extends javax.swing.JFrame {
             GradeBookPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GradeBookPageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(GradeBookScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
+                .addComponent(GradeBookScrollPanel)
                 .addContainerGap())
             .addGroup(GradeBookPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(GradeBookPageLayout.createSequentialGroup()
@@ -748,13 +740,13 @@ public class EducatorUI extends javax.swing.JFrame {
             GradeBookPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GradeBookPageLayout.createSequentialGroup()
                 .addGap(46, 46, 46)
-                .addComponent(GradeBookScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
+                .addComponent(GradeBookScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
                 .addGap(24, 24, 24))
             .addGroup(GradeBookPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(GradeBookPageLayout.createSequentialGroup()
                     .addGap(12, 12, 12)
                     .addComponent(GradeBookLabel)
-                    .addContainerGap(472, Short.MAX_VALUE)))
+                    .addContainerGap(499, Short.MAX_VALUE)))
         );
 
         ContentPanel.add(GradeBookPage, "card2");
@@ -804,14 +796,19 @@ public class EducatorUI extends javax.swing.JFrame {
     }//GEN-LAST:event_ScoresButtonActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-//        try {
-//            currentUser = UserList.getUser(UsernameField.getText(), String.valueOf(PasswordField.getPassword()));
-            currentUser = UserList.getUser("user1", "password1234");
-            swapPanel(HomePage);
-            LogOutButton.setEnabled(true);
-//        } catch (NullPointerException e) {
-//            LoginError.setVisible(true);
-//        }   
+        try {
+            currentUser = UserList.getUser(UsernameField.getText(), String.valueOf(PasswordField.getPassword()));
+            if (currentUser.getPassword().equals(String.valueOf(PasswordField.getPassword()))) {
+               swapPanel(HomePage);
+                LogOutButton.setEnabled(true);
+            }
+            else {
+                LoginError.setVisible(true);
+            }
+            
+        } catch (NullPointerException e) {
+            LoginError.setVisible(true);
+        }   
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void QuizButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuizButtonActionPerformed
@@ -980,17 +977,16 @@ public class EducatorUI extends javax.swing.JFrame {
         
         for (Iterator<Question> it = Quiz.getQuestions().iterator(); it.hasNext();) {
             question = it.next();
-            
+
             QuizQuestionPanel questionpanel = new QuizQuestionPanel();
             questionpanel.initQuestionPanel(question, Quiz);
+            questionpanel.setLabel(question.getQuestionPrompt());
+            questionpanel.QuestionPromptText.setBounds(12, 12+dimy, (QuizContentPanel.getWidth()-48), 100);
+            questionpanel.QuestionPromptText.setWrapStyleWord(true);
+
             questionpanel.setBounds(12, 12+dimy, (QuizContentPanel.getWidth()-24), 100);
-            JTextArea QuestionPromptText = new JTextArea();
-            QuestionPromptText.setText(question.getQuestionPrompt());
-            QuestionPromptText.setBounds(12, 12+dimy, (questionpanel.getWidth()-24), 100);
-            
             questionpanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-            questionpanel.add(QuestionPromptText);
             QuizContentPanel.add(questionpanel);
             questionpanel.setVisible(true);
 
@@ -1008,22 +1004,21 @@ public class EducatorUI extends javax.swing.JFrame {
             Lesson = it.next();
             JPanel gradePanel = new JPanel();
             gradePanel.setBounds(12, 12+dimy, (GradeBookPanel.getWidth()-24), 30);
-            JLabel gradeLessonLabel = new JLabel(Lesson.getLessonTitle(), SwingConstants.RIGHT);
-            gradeLessonLabel.setBounds(12, 12+dimy, 15, 35);
+            JLabel gradeLessonLabel = new JLabel(Lesson.getLessonTitle());
+
             
-            JLabel gradeScoreLabel = new JLabel();
+            JLabel gradeScoreLabel = new JLabel("--");
             gradeLessonLabel.setText(Lesson.getLessonTitle());
             try {
                 String gradeScoreText = String.valueOf(currentUser.getGrade(Lesson.getLessonID()));
                 gradeScoreLabel.setText(gradeScoreText);
             }
             catch(NullPointerException e) {
-                gradeScoreLabel.setText("--");
             }
 
+            
             gradePanel.add(gradeLessonLabel);
             gradePanel.add(gradeScoreLabel);
-            gradeLessonLabel.setAlignmentX(Component.RIGHT_ALIGNMENT);
             
             gradePanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 

@@ -449,12 +449,12 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+                      <EmptySpace pref="148" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
                           <Component id="jPanel1" alignment="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="LoginPromptText" alignment="2" min="-2" pref="283" max="-2" attributes="0"/>
+                          <Component id="LoginPromptText" alignment="2" min="-2" pref="371" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
+                      <EmptySpace pref="170" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -465,7 +465,7 @@
                       <Component id="LoginPromptText" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="294" max="32767" attributes="0"/>
+                      <EmptySpace pref="290" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -478,6 +478,13 @@
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="jPanel1">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -489,39 +496,38 @@
                               <Component id="PasswordLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="LoginButton" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="PasswordField" max="32767" attributes="0"/>
-                                  <Component id="UsernameField" min="-2" pref="124" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="UsernameField" alignment="0" pref="172" max="32767" attributes="0"/>
+                              <Component id="PasswordField" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="135" max="32767" attributes="0"/>
+                          <EmptySpace min="47" max="32767" attributes="0"/>
                       </Group>
                       <Component id="LoginError" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                          <Component id="LoginButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Group type="102" alignment="2" attributes="0">
-                                  <Component id="UsernameLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="14" pref="14" max="14" attributes="0"/>
-                                  <Component id="PasswordLabel" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="2" attributes="0">
-                                  <Component id="UsernameField" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="12" pref="12" max="12" attributes="0"/>
-                                  <Component id="PasswordField" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="UsernameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="UsernameField" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="PasswordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="PasswordField" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="LoginButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="LoginError" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -829,7 +835,7 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="349" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="525" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
@@ -858,7 +864,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="GradeBookScrollPanel" pref="603" max="32767" attributes="0"/>
+                      <Component id="GradeBookScrollPanel" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -874,14 +880,14 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                      <Component id="GradeBookScrollPanel" pref="429" max="32767" attributes="0"/>
+                      <Component id="GradeBookScrollPanel" pref="456" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Component id="GradeBookLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="472" max="32767" attributes="0"/>
+                          <EmptySpace pref="499" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -907,7 +913,7 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="426" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="453" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
