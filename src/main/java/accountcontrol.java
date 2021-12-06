@@ -7,7 +7,7 @@ import java.util.*;
 
 /**
  *
- * @author adrianalanier
+ * @author adrianalanier, ahsan
  */
 /**
 * Holds functions for username and password control
